@@ -1,0 +1,41 @@
+.whole {
+  margin: 0;
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+}
+.img {
+  overflow: hidden;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100%;
+  z-index: -1;
+}
+.img::after {
+  position: absolute;
+  z-index: 100;
+  bottom: 0%;
+  left: 0%;
+  content: " ";
+  min-width: 100vw;
+  min-height: 25%;
+  background-image: linear-gradient(
+    to top,
+    #17171bff,
+    #17171bbd,
+    #17171b7e,
+    #17171b3f,
+    #17171b00
+  );
+}
+.img img {
+  filter: blur(25px);
+  object-fit: cover;
+}
+.sect {
+  padding-top: var(--menuheight);
+  z-index: 1;
+  margin-inline: var(--padding);
+  width: calc(100% - 2 * var(--padding));
+  max-height: calc(1440px - var(--menuheight));
+}

@@ -1,0 +1,113 @@
+.half {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.bgsvg {
+  position: absolute;
+  animation: updown;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes updown {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+.py {
+  animation-delay: 0s;
+  scale: 4;
+  fill: rgba(var(--xlightRGB), 0.2);
+  top: 45%;
+  left: 10%;
+}
+.rust {
+  animation-delay: -10s;
+  fill: rgba(var(--xlightRGB), 0.2);
+  scale: 2.5;
+  top: 65%;
+  left: 90%;
+}
+.react {
+  animation-delay: -5s;
+  fill: rgba(var(--xlightRGB), 0.4);
+  scale: 2;
+  top: 10%;
+  left: 25%;
+}
+.godot {
+  animation-delay: -20s;
+  fill: rgba(var(--xlightRGB), 0.1);
+  scale: 4;
+  left: 75%;
+  top: 25%;
+}
+.blender {
+  animation-delay: -15s;
+  fill: rgba(var(--xlightRGB), 0.1);
+  scale: 6;
+  left: 20%;
+  top: 85%;
+}
+
+.Ibox {
+  width: 30vw;
+  min-width: 300px;
+  max-width: 600px;
+  aspect-ratio: 300/450;
+}
+.imgCont {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  clip-path: url(#clip);
+}
+.imgCont img {
+  left: 150%;
+}
+.svg {
+  position: absolute;
+  z-index: -1;
+  width: 0%;
+  height: 0%;
+}
+@media screen and (max-width: 700px) {
+  .py {
+    fill: rgba(var(--xlightRGB), 0.15);
+    scale: 4;
+    top: 45%;
+    left: 10%;
+  }
+  .rust {
+    top: 85%;
+    left: 90%;
+  }
+  .react {
+    top: 10%;
+    left: 15%;
+  }
+  .godot {
+    scale: 4;
+    left: 85%;
+    top: 20%;
+  }
+  .blender {
+    fill: rgba(var(--xlightRGB), 0.075);
+    scale: 7;
+    left: 5%;
+    top: 85%;
+  }
+}

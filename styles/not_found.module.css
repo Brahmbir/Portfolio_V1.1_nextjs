@@ -1,0 +1,74 @@
+.cont {
+  width: 100vw;
+  height: 100vw;
+  background-color: #000;
+  z-index: 100;
+}
+.FOF {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    #ffffffbf 12.5%,
+    #f9fb53bf 12.5%,
+    #f9fb53bf 25%,
+    #75fbfdbf 25%,
+    #75fbfdbf 37.5%,
+    #75fc4dbf 37.5%,
+    #75fc4dbf 50%,
+    #dd30e9bf 50%,
+    #dd30e9bf 62.5%,
+    #dd3021bf 62.5%,
+    #dd3021bf 75%,
+    #0000e8bf 75%,
+    #0000e8bf 87.5%,
+    #000000bf 87.5%
+  );
+  display: flex;
+  flex-direction: column;
+}
+.backFOF {
+  width: fit-content;
+  height: fit-content;
+  background-color: #000000;
+  margin: auto;
+  border-radius: 3px;
+  border: 1px solid white;
+  padding: 5px;
+}
+.Foftext {
+  background: linear-gradient(#fff, #000, #fff 75%);
+  background-size: 100% 8%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  font-size: max(6vw, 10vh);
+}
+.downlabel {
+  display: flex;
+  width: 100vw;
+  padding-block: 10px;
+  color: #ffffff;
+  outline: 1px solid white;
+  background-color: #000000;
+  padding-inline: 4vw;
+  gap: 5px;
+}
+.pl {
+  margin: 0;
+  text-align: center;
+}
+.pl:last-child {
+  flex: 1;
+}
+
+@media screen and (max-width: 550px) {
+  .downlabel {
+    flex-direction: column;
+  }
+  .Foftext {
+    font-size: 50px;
+  }
+}
