@@ -9,8 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "airtable": "^0.12.2",
+    "framer-motion": "^10.16.16",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-icon": "^1.0.0",
+    "react-markdown": "^9.0.1",
+    "sharp": "^0.33.0",
+    "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "encoding": "^0.1.13"
   }
 }
