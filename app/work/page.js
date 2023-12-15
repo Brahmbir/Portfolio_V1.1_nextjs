@@ -1,11 +1,12 @@
-import React from 'react';
+import ContactSection from "@/components/contactSection/ContactSection"
 
-const Page = () => {
-    return (
-        <div>
-            work
-        </div>
-    );
+export default function Page() {
+  return (
+    <main>
+      {/* <HeroSect /> */}
+      {/* <AboutSect /> */}
+      {/* <WorkSect /> */}
+      <ContactSection />
+    </main>
+  )
 }
-
-export default Page;

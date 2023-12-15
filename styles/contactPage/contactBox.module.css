@@ -1,0 +1,118 @@
+.Main {
+  position: relative;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.Main::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.Main [hidden] {
+  display: none;
+}
+.BG {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--background);
+}
+.BG > div {
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  position: absolute;
+}
+
+.film {
+  z-index: -1;
+  position: fixed;
+  top: -25px;
+  left: -25px;
+  width: calc(100vw + 50px);
+  height: calc(100vh + 50px);
+  overflow: hidden;
+  filter: url("#grain");
+  /* background-color: #b15aa1; */
+  backdrop-filter: blur(50px) saturate(150%);
+  -webkit-backdrop-filter: blur(50px) saturate(100%);
+  animation: grainM 0.6s linear 0s infinite forwards;
+}
+@keyframes grainM {
+  0%,
+  100% {
+    top: -20px;
+    left: -20px;
+  }
+  24.9% {
+    top: -20px;
+    left: -20px;
+  }
+  25% {
+    top: -5px;
+    left: -23px;
+  }
+  49.9% {
+    top: -5px;
+    left: -23px;
+  }
+  50% {
+    top: -10px;
+    left: -30px;
+  }
+  74.9% {
+    top: -10px;
+    left: -30px;
+  }
+  75% {
+    top: -30px;
+    left: -5px;
+  }
+  99.9% {
+    top: -30px;
+    left: -5px;
+  }
+}
+.fornt {
+  z-index: 100;
+  width: calc(100%);
+  padding-bottom: 2.5vh;
+  padding-inline: calc(var(--padding) * 1.5);
+}
+#backBall0 {
+  background-color: #b15aa1;
+  top: 0px;
+  left: 0px;
+  min-width: 200px;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+}
+
+#backBall1 {
+  background-color: #3b3aa4;
+  min-width: 600px;
+  aspect-ratio: 1/1;
+}
+#backBall3 {
+  background-color: #e5dfd9;
+  width: 150px;
+  aspect-ratio: 1/1;
+}
+#backBall4 {
+  display: block;
+  background-color: #4e4cb8;
+  width: 225px;
+  aspect-ratio: 1/1;
+}
+/* @media screen and (max-width: 700px) {
+    .fornt {
+      padding-block: 1px;
+    }
+  } */
+@media screen and (max-width: 1100px) {
+  #backBall4 {
+    display: none;
+  }
+}

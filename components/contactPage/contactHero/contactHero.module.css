@@ -1,0 +1,156 @@
+.contsectDetail {
+  z-index: 1;
+  width: calc(100%);
+  padding-top: min(27.5vh, calc(1.4 * 144px));
+  display: flex;
+  flex-direction: column;
+  gap: 5.5vh;
+  color: var(--text);
+  align-items: center;
+  justify-content: space-between;
+}
+.contsectDetail svg {
+  display: none;
+}
+.contsectDetail > h2 {
+  position: relative;
+  font-size: 4em;
+  line-height: 80%;
+  color: var(--text);
+  width: calc(100% - 2vw - 2 * var(--padding));
+  font-weight: 800;
+  padding-inline: 1vw;
+  transform: translate(0%, 30%);
+}
+.contsectDetail > h2::before {
+  content: "make";
+  z-index: -1;
+  line-height: 80%;
+  transform: translate(-3.5%, -50%);
+  position: absolute;
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-size: 2.5em;
+  -webkit-text-stroke: 1.75px var(--accent);
+}
+.emailcosect {
+  width: calc(100% - calc(2 * var(--padding)));
+  margin-block: 15vh 3vh;
+  font-size: 1.7em;
+  line-height: 125%;
+}
+.emailcosect p {
+  color: var(--textdark);
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.reachme {
+  width: calc(100% - calc(2 * min(8vw, 120px)));
+}
+.reachme > h3 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.linkreach {
+  margin-block: 5vh;
+  width: 100%;
+  display: flex;
+}
+.linkreach .linkbar {
+  border-radius: 100px;
+  padding: 10px;
+  background-color: #1d1d5e;
+  display: flex;
+  gap: 10px;
+}
+.linkbar .img {
+  position: relative;
+  height: 2.5em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+.img img {
+  height: 80%;
+  width: 80%;
+  padding: 10%;
+  object-fit: cover;
+}
+.linkbar h3 {
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.linkbar h3:hover {
+  color: var(--textdark);
+}
+@media screen and (min-width: 1300px) {
+  .linkreach {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .linkreach {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .linkreach {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .linkreach {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .linkreach {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .contsectDetail {
+    padding-top: min(25vh, calc(1.35 * 144px));
+    gap: 3vh;
+  }
+  .contsectDetail > h2 {
+    width: calc(100%);
+    font-size: 2.5em;
+    font-weight: 800;
+    padding-inline: 0vw;
+  }
+  .emailcosect {
+    margin-block: 10vh 3vh;
+    width: calc(100%);
+    font-size: 1.3em;
+  }
+  .reachme {
+    width: calc(100%);
+  }
+  .reachme > h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+  .linkreach {
+    margin-block: 5vh;
+    width: 100%;
+    display: grid;
+    /* gap: ; */
+  }
+}
+@media screen and (max-width: 400px) {
+  .linkreach {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

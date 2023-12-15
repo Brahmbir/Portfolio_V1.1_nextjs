@@ -1,0 +1,158 @@
+.conform {
+  margin-block: min(10vh, 100px);
+  width: calc(100%);
+  padding-inline: min(8vw, 120px);
+  color: var(--text);
+}
+.conform > h3 {
+  position: relative;
+  margin-inline: auto;
+  width: fit-content;
+  font-weight: 100;
+  z-index: 10;
+  margin-bottom: 7.5vh;
+  font-size: 1.5em;
+}
+.conform > h3::before,
+.conform > h3::after {
+  position: absolute;
+  width: calc(calc(calc(100vw - calc(4 * var(--padding))) / 2) - 50%);
+  height: 100%;
+  border-top: 1px solid var(--text);
+  content: "  ";
+  transform: translate(-0%, 50%);
+}
+.conform > h3::before {
+  transform: translate(-100%, 50%);
+}
+.conform fieldset {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+.conform legend {
+  z-index: 5;
+  font-size: max(12px, 0.7rem);
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.input_wrapper {
+  overflow: hidden;
+  margin-bottom: 2rem;
+  width: 100%;
+  min-width: min(calc(100%), 300px);
+  max-width: min(calc(100%), 1200px);
+  height: 4rem;
+  height: fit-content;
+  border: 0.5px solid var(--textdark);
+  cursor: text;
+  background-color: var(--background);
+  font-weight: 300;
+  position: relative;
+}
+.formMess {
+  width: 50%;
+  max-width: min(calc(100% - 1.5rem), 600px);
+}
+.input_wrapper:hover {
+  border: 0.5px solid var(--text);
+}
+.contact_form .input_wrapper input:not([type="submit"], [type="file"]),
+.message_wrapper textarea:not([type="submit"], [type="file"]) {
+  max-width: min(calc(100%));
+  background: transparent;
+  color: var(--background);
+  border: 0px;
+  height: 4rem;
+  outline: none;
+  font-size: 1.4rem;
+  padding-inline: 1.5rem 0.2rem;
+  padding-block: 1.8rem 0.2rem;
+  transition: border-color 0.25s, background-color 0.25s;
+  width: 100%;
+}
+.message_wrapper textarea:not([type="submit"], [type="file"]) {
+  height: 11rem;
+  padding: 1.8rem 1.8rem 0.5rem 1.5rem;
+  max-width: min(calc(100%));
+  resize: none;
+}
+.message_wrapper label {
+  color: var(--text);
+}
+.message_wrapper textarea[data-empty="false"] + label,
+.message_wrapper textarea:focus + label {
+  transform: translate(0rem, -0.5rem);
+  color: var(--background);
+}
+.contact_form .input_wrapper > label {
+  left: 1.5rem;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 1rem;
+  transform: translate(0rem, 0.5rem);
+  transform-origin: left top;
+  transition: all 0.2s ease-in-out;
+}
+.contact_form .input_wrapper input:not([type="submit"], [type="file"]):focus,
+.contact_form
+  .input_wrapper
+  input:not([type="submit"], [type="file"]):not(:placeholder-shown) {
+  background-color: var(--text);
+}
+.message_wrapper textarea:focus,
+.message_wrapper textarea[data-empty="false"] {
+  background-color: var(--text);
+  outline: 10px solid var(--text);
+}
+.contact_form
+  .input_wrapper
+  input:not([type="submit"], [type="file"]):focus
+  + label,
+.contact_form
+  .input_wrapper
+  input:not([type="submit"], [type="file"]):not(:placeholder-shown)
+  + label {
+  transform: translate(0rem, -0.4rem);
+  color: var(--background);
+}
+.input_wrapper textarea {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.send_button {
+  z-index: 10;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--background);
+  color: var(--text);
+  padding-inline: 1.8em;
+  height: 3.5rem;
+  border: 0.5px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.send_button:hover {
+  background-color: var(--accent);
+  color: var(--Mcolor);
+  padding-inline: 1.8em;
+  height: 3.5rem;
+  border: 0.5px solid var(--textdark);
+  cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  .conform {
+    padding-inline: calc(0.5 * var(--padding));
+    margin-inline: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .conform {
+    margin-inline: 0px;
+    padding-inline: 0px;
+  }
+}
