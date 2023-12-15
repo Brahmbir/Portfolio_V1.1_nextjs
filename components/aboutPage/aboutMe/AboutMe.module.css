@@ -1,0 +1,114 @@
+.body {
+  margin-inline: var(--padding);
+  display: flex;
+  flex-direction: column;
+  /* margin-block: 12.5vh; */
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  width: 100%;
+  max-width: min(calc(6 * 256px));
+}
+.line {
+  width: 5em;
+  max-width: 100px;
+  min-width: 50px;
+  height: 0.45em;
+  border-radius: 5em;
+  background: linear-gradient(
+    to right,
+    #592752,
+    #753059,
+    #903b5e,
+    #aa485f,
+    #c2585f,
+    #d4695d,
+    #e37c5b,
+    #ef9059,
+    #f8a858,
+    #fdc25a,
+    #fedd62,
+    #f9f871
+  );
+}
+.heading {
+  margin-top: 0.5em;
+  font-size: 3em;
+  font-weight: 600;
+  width: fit-content;
+  /* background: linear-gradient(to right, var(--accent) 50%, #242475); */
+  background: linear-gradient(to right, var(--accent) 50%, var(--light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.paras {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+.paras p {
+  color: var(--textdark);
+  line-height: 1.5em;
+  font-weight: 200;
+  font-size: 1.25em;
+}
+.Econt {
+  margin-top: 2.25em;
+  position: relative;
+}
+.Econt::after,
+.Econt::before {
+  position: absolute;
+  top: 0;
+  content: " ";
+  z-index: 10;
+  width: var(--padding);
+  height: 100%;
+}
+.Econt::before {
+  background: linear-gradient(to right, var(--background) 10%, #17171b00);
+  left: calc(-1 * var(--padding));
+}
+.Econt::after {
+  background: linear-gradient(to right, #17171b00, var(--background) 90%);
+  right: calc(-1 * var(--padding));
+}
+.expArea {
+  width: 100vw;
+  transform: translateX(calc(-1 * var(--padding)));
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--padding);
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  gap: 2.5em;
+}
+.expArea::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+@media screen and (max-width: 800px) {
+  .paras {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .paras p {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 2.5em;
+  }
+  .paras p {
+    font-size: 1.2rem;
+  }
+}

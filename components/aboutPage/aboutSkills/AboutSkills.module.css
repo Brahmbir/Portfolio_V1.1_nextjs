@@ -1,0 +1,107 @@
+.sect {
+  width: 100vw;
+  padding-inline: var(--padding);
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.line {
+  width: 5em;
+  max-width: 100px;
+  min-width: 50px;
+  height: 0.45em;
+  border-radius: 5em;
+  background: linear-gradient(
+    to right,
+    #592752,
+    #753059,
+    #903b5e,
+    #aa485f,
+    #c2585f,
+    #d4695d,
+    #e37c5b,
+    #ef9059,
+    #f8a858,
+    #fdc25a,
+    #fedd62,
+    #f9f871
+  );
+}
+.heading {
+  margin-top: 0.5em;
+  font-size: 3em;
+  font-weight: 600;
+  width: fit-content;
+  /* background: linear-gradient(to right, var(--accent) 50%, #242475); */
+  background: linear-gradient(to right, var(--accent) 50%, var(--light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.para {
+  margin-top: 1.25em;
+  width: 70%;
+  line-height: 1.25em;
+  font-weight: 200;
+  font-size: 1.35em;
+  color: var(--textdark);
+}
+.SkillArea {
+  margin-top: 1.75em;
+  display: flex;
+  justify-content: space-between;
+}
+.cc {
+  flex: 0.3;
+}
+.cc svg {
+  width: 2em;
+  height: 2em;
+  aspect-ratio: 1/1;
+}
+.cc h3 {
+  margin-block: 0.25em 0.5em;
+  font-size: 1.35em;
+  word-spacing: -2px;
+  font-weight: 500;
+  width: fit-content;
+  background: linear-gradient(to right, #fafafa 50%, #6a6969);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.cc p {
+  color: var(--textdark);
+  font-size: 1.05em;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+@media screen and (max-width: 800px) {
+  .para {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .para {
+    line-height: 1.35em;
+  }
+  .SkillArea {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .cc {
+    width: 80%;
+    min-width: 300px;
+    flex: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 2.5em;
+  }
+  .para {
+    font-size: 1.275rem;
+  }
+}

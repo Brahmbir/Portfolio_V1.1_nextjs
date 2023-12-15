@@ -1,0 +1,48 @@
+.Ecard:last-child {
+  margin-right: var(--padding);
+  scroll-snap-align: end;
+}
+.Ecard:first-child {
+  margin-left: var(--padding);
+}
+.Ecard {
+  scroll-snap-align: start;
+  display: grid;
+  gap: 0.75em;
+  width: 25%;
+  min-width: 250px;
+  max-width: 300px;
+  /* background-color: rgba(0, 255, 255, 0.232); */
+}
+.Ecard h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  width: fit-content;
+  height: fit-content;
+  background: linear-gradient(to right, #fafafa 50%, #6a6969);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.Ecard h3 span {
+  position: absolute;
+  width: 90px;
+  height: 1px;
+  top: 50%;
+  left: 110%;
+  background: linear-gradient(to right, var(--textdark), #6a696900);
+}
+.Ecard h3 span::before {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: calc(50% - 2px);
+  border-radius: 2px;
+  content: " ";
+  background-color: var(--textdark);
+}
+.Ecard P {
+  color: var(--textdark);
+}
