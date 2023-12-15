@@ -1,0 +1,113 @@
+.topBar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  z-index: 100;
+  top: 0;
+  padding-top: min(4vh, 20px);
+  padding-inline: min(8vw, 120px);
+  width: calc(100%);
+  backdrop-filter: blur(16px) saturate(110%);
+  -webkit-backdrop-filter: blur(16px) saturate(110%);
+  height: min(11%, 100px);
+  background: linear-gradient(var(--background), transparent);
+}
+.navMenu {
+  align-items: center;
+  width: min-content;
+  font-size: 130%;
+  display: flex;
+}
+.link {
+  line-height: 100%;
+  position: static;
+  margin-block: auto;
+  display: flex;
+  gap: 2em;
+  z-index: 0;
+  list-style: none;
+}
+.link a,
+.link a:visited {
+  position: relative;
+  z-index: 10;
+  color: var(--text);
+  position: relative;
+  margin: 0;
+  height: fit-content;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.2s;
+}
+.link a:hover {
+  color: #13132b;
+}
+.link a > .NavH {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+  position: absolute;
+  inset: auto 0 0 auto;
+  border-radius: 1.5px;
+  width: 130%;
+  height: 10%;
+  margin: 0;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(100%) translateX(25%);
+  background-color: var(--text);
+}
+.link a:hover .NavH {
+  height: 100%;
+  transform: translateY(1px) translateX(11%);
+  opacity: 1;
+}
+.UnderLine {
+  position: absolute;
+  left: 0%;
+  top: 72.5%;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+}
+.link a:hover .UnderLine {
+  color: var(--text);
+}
+@media screen and (max-width: 550px) {
+  .link {
+    margin: 0;
+    height: 100vh;
+    height: 0;
+    max-height: 1440px;
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0, 0.28, 0.59, 1);
+    background: #13132b;
+    gap: 0.2em;
+    font-size: 2.5rem;
+  }
+  .UnderLine {
+    display: none;
+  }
+  .link a {
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0, 0.28, 0.59, 1);
+  }
+  .navMenu {
+    font-size: 100%;
+  }
+  .link[data-visi="true"] {
+    height: 100vh;
+  }
+  .link[data-visi="true"] a {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+.logo {
+  position: relative;
+  font-size: 300%;
+  margin-block: auto;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.logo::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  color: transparent;
+  content: "Brahm";
+  font-size: inherit;
+  -webkit-text-stroke: 0.5px var(--text);
+  transition: all 0.1s;
+}
+.logo:hover::after {
+  top: 0.75px;
+  left: 0.75px;
+}
