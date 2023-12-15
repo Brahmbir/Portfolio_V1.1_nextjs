@@ -1,0 +1,79 @@
+.message {
+  flex: 1;
+  width: calc(100%);
+  display: flex;
+  padding-block: 0px 25px;
+  background-color: #292955;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: flex-end;
+  position: relative;
+  /* padding-bottom: 1em; */
+}
+.mes {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  width: calc(100%);
+  height: min-content;
+  max-width: min(350px, calc(100vw - 80px));
+  max-height: calc(100%);
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  padding-inline: 15px;
+  padding-bottom: 5vh;
+  overflow-y: scroll;
+}
+.mes::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--secondary);
+  background-color: var(--xlight);
+}
+.mes::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--xlight);
+}
+.mes::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+}
+/* scroll styles end  */
+.MBox {
+  z-index: 2;
+  position: relative;
+  font-size: 0.8em;
+  width: fit-content;
+  max-width: 75%;
+  padding-block: 10px;
+  padding-inline: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+.MBox > a:visited,
+.MBox > a {
+  margin-right: 15px;
+  padding-inline: 3px;
+  color: inherit;
+}
+.MBox > a:hover {
+  text-decoration: none;
+}
+.MBox > a::after {
+  position: absolute;
+  content: "🔗";
+  width: fit-content;
+  text-decoration: none;
+  width: 100%;
+}
+.user {
+  background-color: #3636b0;
+  margin-left: auto;
+}
+#clickable,
+.MBox[data-clickable-element="true"],
+.MBox[data-click="true"] {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--secondary);
+  border-radius: 20px !important;
+}
