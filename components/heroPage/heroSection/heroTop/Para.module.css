@@ -1,0 +1,47 @@
+.Para {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: var(--textdark);
+}
+.Para > div {
+  height: fit-content;
+  width: 75%;
+}
+.Para > div > p {
+  line-height: 1.35em;
+  font-size: 1.23em;
+  font-weight: 400;
+}
+.but {
+  margin-top: 1.5em;
+  display: flex;
+  height: 3.5em;
+  gap: 1em;
+}
+.but a {
+  text-align: center;
+  height: 3.5em;
+  min-width: 125px;
+  border-radius: 1000px;
+  padding-block: 1.1em;
+  padding-inline: 1.5em;
+  width: fit-content;
+  font-weight: 500;
+  word-spacing: -0.08em;
+  transition: all 0.2s;
+}
+.talkLink {
+  background-color: var(--primary);
+  color: var(--text);
+}
+.talkLink:hover {
+  background-color: var(--mlight);
+}
+.ResuLink {
+  color: var(--text);
+  outline: 1.5px solid var(--primary);
+}
+.ResuLink:hover {
+  background-color: rgba(var(--mlightRGB), 0.5);
+}

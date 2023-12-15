@@ -1,0 +1,110 @@
+.sect {
+  margin-inline: var(--padding);
+  margin-bottom: 10vh;
+  width: calc(100% - 2 * var(--padding));
+  height: max-content;
+}
+.body {
+  --borderColour: var(--light);
+  border-top: 1px solid var(--borderColour);
+  display: flex;
+  margin-top: 7.5vh;
+}
+.link {
+  display: flex;
+  border-right: 1px solid var(--borderColour);
+  width: max-content;
+}
+.button {
+  height: fit-content;
+  margin: 2.5em;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25em;
+  padding-inline: 2.5em;
+  width: fit-content;
+  min-width: 275px;
+  background-color: var(--primary);
+}
+.button:hover svg {
+  scale: 2;
+}
+.button p {
+  font-weight: 500;
+  word-spacing: -0.08em;
+}
+.button svg {
+  margin-block: auto;
+  scale: 1.5;
+  margin-right: 0.25em;
+  height: 100%;
+  aspect-ratio: 1/1;
+  transition: all 0.2s;
+}
+.read {
+  width: 100%;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+.read h3 {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+.read p {
+  width: 90%;
+  color: var(--textdark);
+  font-weight: 300;
+  font-size: 1.5em;
+}
+.tagArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block: 1.75em 0;
+}
+.infoPoint {
+  border-left: 2.5px solid var(--accent);
+  padding-left: 1em;
+  display: flex;
+  width: fit-content;
+  height: 2em;
+  gap: 1em;
+}
+.infoPoint svg {
+  margin-block: auto;
+  height: 1em;
+  scale: 1.5;
+  aspect-ratio: 1/1;
+}
+.infoPoint p {
+  font-size: 0.5em;
+  margin-block: auto;
+}
+@media screen and (max-width: 1000px) {
+  .body {
+    margin-top: 0;
+    border-top: 0px;
+    flex-direction: column-reverse;
+  }
+  .link {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-right: 0px;
+  }
+  .button {
+    margin: 0em;
+    border-radius: 100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .read {
+    padding-inline: 0px;
+  }
+  .read p {
+    width: 100%;
+  }
+}
