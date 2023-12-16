@@ -1,0 +1,27 @@
+.workS {
+  width: calc(100%);
+  color: var(--text);
+  height: fit-content;
+  padding-top: clamp(150px, 20%, 225px);
+  padding-inline: var(--padding);
+}
+.workIntro {
+  padding-bottom: 3rem;
+}
+.workIntro span,
+.tags div {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3em 0.7em;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  background-color: #2a2a8958;
+  color: #c4c4ed;
+}
+.workIntro h2 {
+  margin-block: 1rem 1.8rem;
+  font-size: 3rem;
+}
+.workIntro p {
+  color: var(--textdark);
+}

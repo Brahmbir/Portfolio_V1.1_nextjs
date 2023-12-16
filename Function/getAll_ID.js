@@ -1,4 +1,4 @@
-import { base } from "@/utils/Airtable";
+import { base } from "@/utils/Airtable"
 
 export default async function getData() {
 

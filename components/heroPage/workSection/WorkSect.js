@@ -13,13 +13,14 @@ async function getData() {
             { field: "created_on", direction: "desc" }
         ]
     }).firstPage()
-
+console.log(data)
     return data.map(record => record._rawJson).filter(e => !e.fields.isHidden);
 
 }
 
 const WorkSect = async () => {
     let workdata = await getData().catch(() => "error")
+    console.log("render")
     return (
         <section className={styles.sect}>
             <h2> MY PAST <br /> PROJECT</h2>

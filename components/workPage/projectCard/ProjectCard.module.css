@@ -1,0 +1,204 @@
+.workCard {
+  background-color: #6968ab19;
+  border-radius: 1.25em;
+  position: relative;
+  padding-inline: 2em;
+  padding-block: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  display: flex;
+  gap: 1.5em;
+  color: var(--text);
+}
+.workCard::before {
+  left: 50%;
+  bottom: -5%;
+  position: absolute;
+  transform: translate(-50%);
+  border-bottom: 0.5px solid var(--xlight);
+  width: 40%;
+  content: " ";
+}
+.workCard:last-child::before {
+  display: none;
+}
+.Comp {
+  font-size: 2rem;
+  display: flex;
+  padding-block: 2rem 0px;
+  width: 100%;
+  min-height: 20vh;
+  justify-content: center;
+  align-items: flex-end;
+}
+.LOAD {
+  animation: Load 0.5s infinite alternate linear;
+}
+
+@keyframes Load {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+.workCard:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+.workImg {
+  border-radius: 0.75em;
+  overflow: hidden;
+  position: relative;
+  width: 40%;
+  aspect-ratio: 16/10;
+  background-color: #4e4cb86f;
+  animation: blink 0.5s infinite alternate linear;
+}
+@keyframes blink {
+  from {
+    background-color: #5b5abbcb;
+  }
+  to {
+    background-color: #6968ab;
+  }
+}
+.workImg .Pimg {
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  text-align: center;
+}
+.workImg .Pimg:hover {
+  width: 110%;
+  height: 110%;
+}
+.workDes {
+  width: 60%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.head_tag {
+  display: flex;
+  justify-content: space-between;
+}
+.workHead {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  font-weight: 800;
+}
+.tags {
+  display: flex;
+  gap: 0.5em;
+}
+.tags div {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.2em 0.7em;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  background-color: #2a2a8958;
+  color: #c4c4ed;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.workPara {
+  overflow: hidden;
+  padding: 1em;
+  flex: 1;
+  font-weight: 200;
+  line-height: 1.675em;
+  text-overflow: ellipsis;
+}
+.workBut {
+  width: 100%;
+  display: flex;
+  float: right;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.workCard:nth-child(2n + 1) .workBut {
+  flex-direction: row;
+}
+.workTo:visited,
+.workTo {
+  color: var(--textdark);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  padding-block: 0.5em;
+  font-size: 1.2em;
+  position: relative;
+}
+.wmore {
+  margin-right: 1em;
+}
+.wmore::after {
+  position: absolute;
+  right: -20%;
+  content: "⇝";
+  transition: right 0.3s;
+}
+.wmore:hover::after {
+  right: -30%;
+}
+.workTo::before {
+  position: absolute;
+  content: " ";
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+  left: 50%;
+  top: 1.9em;
+  width: 0%;
+  height: 0.1em;
+  background-color: var(--text);
+  transition: all 0.3s;
+}
+.workTo:hover {
+  color: var(--text);
+}
+.workTo:hover::before {
+  background-color: var(--primary);
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .workCard {
+    flex-direction: column;
+  }
+  .workCard:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+  .workCard:nth-child(2n + 1) .workBut {
+    flex-direction: row-reverse;
+  }
+  .workImg {
+    width: 100%;
+  }
+  .workDes {
+    width: calc(100%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .workCard {
+    padding-inline: 0px;
+  }
+  .head_tag {
+    gap: 1em;
+    flex-direction: column;
+  }
+  .LOAD {
+    padding-block: 2rem;
+    align-items: end;
+  }
+}

@@ -1,0 +1,75 @@
+.proSect {
+  padding-top: min(15vh, calc(1.5 * 144px));
+  width: calc(100% - calc(2 * min(8vw, 120px)));
+  margin-inline: min(8vw, 120px);
+  color: var(--text);
+  position: relative;
+}
+.proSect > h2 {
+  margin: 0px;
+  font-size: 5em;
+}
+
+.proPara {
+  border: 1px solid var(--text);
+  margin-top: 1.5em;
+  padding: 1em 2em;
+  width: calc(100%);
+  font-size: 1.3em;
+  box-shadow: 4px 4px 0px var(--text);
+}
+.proPara > * {
+  margin: revert;
+}
+.proSummary {
+  margin-top: 2em;
+  padding: 2em;
+  background-color: var(--primary);
+}
+.proSummary > h3 {
+  margin: 0px;
+  padding-bottom: 1em;
+  font-size: 2.5em;
+}
+.proGS {
+  display: flex;
+}
+.GS {
+  flex: 1;
+}
+.GS p {
+  font-size: 1.4em;
+  padding-inline: 1em;
+  padding-top: 1em;
+  position: relative;
+  z-index: 5;
+}
+.GS p::before {
+  position: absolute;
+  inset: -30% auto auto 0%;
+  z-index: -1;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--mlight);
+}
+.Solution p::before {
+  content: "Solution:";
+}
+.Goal p::before {
+  content: "Goal:";
+}
+@media screen and (max-width: 800px) {
+  .proGS {
+    gap: 3em;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .proSummary > h3 {
+    font-size: 2em;
+  }
+  .GS::before {
+    font-size: 1.5em;
+    inset: -10% auto auto 0%;
+  }
+}

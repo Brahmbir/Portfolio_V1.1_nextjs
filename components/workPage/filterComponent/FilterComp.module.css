@@ -1,0 +1,50 @@
+.selectTag {
+  display: flex;
+  padding-block: 1.2em;
+  padding-inline: 0.5em;
+  border-top: 0.5px solid var(--xlight);
+  border-bottom: 0.5px solid var(--xlight);
+  gap: 1em;
+  overflow-x: hidden;
+  margin-bottom: 1em;
+}
+.selectTag button {
+  text-transform: capitalize;
+  border-radius: 100px;
+  outline: 0px;
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  padding: 0.8em 2em;
+  transition: all 0.2s;
+}
+.selectTag > button[data-active="true"],
+.selectTag > button[data-active="true"]:hover {
+  border: 1px solid var(--accent);
+  background-color: rgba(78, 76, 184, 0.317);
+}
+.selectTag button:hover {
+  background-color: var(--mlight);
+}
+@media screen and (max-width: 500px) {
+  .selectTag {
+    padding-inline: 0px;
+    gap: 0px;
+    justify-content: space-between;
+  }
+  .selectTag button {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .selectTag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+  .selectTag button {
+    font-size: 0.7em;
+  }
+}
