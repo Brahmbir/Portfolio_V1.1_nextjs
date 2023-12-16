@@ -4,29 +4,30 @@ import { motion as m } from "framer-motion"
 import Image from "next/image";
 
 function ProjectCard(props) {
-    let link = `/work/${props.id}?projectID=${props.fields.ProjectTableLink[0]}`
+    console.log(props)
+    let link = `/work/${props.id}`
     return (
         <m.div initial={{ y: 100, scaleY: 0.8, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, scaleY: 1, opacity: 1 }} className={styles.workCard}>
             <Link href={link} className={styles.workImg} >
                 <div className={styles.Pimg}>
-                    {props.fields.Image ? <Image fill={true} sizes="50vw" style={{ objectFit: "cover " }} quality={100} src={props.fields.Image[0].url} alt={props.fields.Tittle} /> : "no Image"}
+                    {props.Image ? <Image fill={true} sizes="50vw" style={{ objectFit: "cover " }} quality={100} src={props.Image[0].url} alt={props.Image[0].name} /> : "no Image"}
                 </div>
             </Link>
             < div className={styles.workDes} >
                 <div className={styles.head_tag}>
                     <h3 className={styles.workHead}>
-                        {props.fields.Tittle}
+                        {props.Tittle}
                     </h3>
                     <div className={styles.tags}>
-                        {props.fields.Tags.map((value, i) => { return <div key={"ff" + i} >{value}</div> })}
+                        {props.Tags.map((value, i) => { return <div key={"ff" + i} >{value}</div> })}
                     </div>
                 </div>
                 <p className={styles.workPara}>
-                    {props.fields.Description}
+                    {props.Description}
                 </p>
                 <div className={styles.workBut}>
                     <Link href={link} className={`${styles.workTo} ${styles.wmore}`}>Learn More</Link>
-                    {props.fields.Github && <a href={props.fields.Github} target="blank" className={`${styles.workTo} ${styles.wGit}`}>GitHub</a>}
+                    {props.Github && <a href={props.Github} target="blank" className={`${styles.workTo} ${styles.wGit}`}>GitHub</a>}
                 </div>
             </div >
         </m.div >

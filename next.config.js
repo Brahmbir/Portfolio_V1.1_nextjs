@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {images: {domains:["v5.airtableusercontent.com"]},}
+const nextConfig = {images: {domains:["us-east-1.xata.sh","us-east-1.storage.xata.sh"]},}
 
 module.exports = nextConfig

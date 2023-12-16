@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@xata.io/client": "^0.28.1",
-    "airtable": "^0.12.2",
     "framer-motion": "^10.16.16",
     "next": "14.0.4",
     "react": "^18",

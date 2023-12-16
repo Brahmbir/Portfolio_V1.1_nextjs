@@ -1,38 +1,51 @@
-import getData from '@/Function/getDataForProject';
-import getMetaData from "@/Function/getDataForMeta"
-
 import styles from "@/styles/projectPage/Project.module.css"
 import MarkDownStyles from "@/styles/projectPage/Markdown.module.css"
 
 import ContactSection from '@/components/contactSection/ContactSection';
 import ProjectTop from "@/components/projectPage/ProjectTop"
-// import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import ReactMarkdown from "react-markdown"
 
+import { getXataClient } from "@/utils/xata";
+import { notFound } from "next/navigation";
+
+const xata = getXataClient();
+
+
+async function getData(id){
+
+    const Workdata = await xata.db.AllWorkTable.read(id)
+    if (Workdata.isHidden) {
+        notFound()
+    }
+    const Projectdata = await xata.db.ProjectTable.read(Workdata.ProjectTableLink.id)
+
+    return {...Workdata,Projectdata}
+}
+
+
 export async function generateMetadata({ params }) {
-
-    const data = await getMetaData(params.work_id)
-    let link = `${process.env.SITEURL}/work/${data.id}?projectID=${data.fields.ProjectTableLink[0]}`
-
-    let description = `This is the detail page of ${data.fields.Tittle}. ${data.fields.Description}`
-
+    const data = await getData(params.work_id).catch(()=>{notFound()})
+    let link = `${process.env.SITEURL}/work/${data.id}`
+    
+    let description = `This is the detail page of ${data.Tittle}. ${data.Description}`
+    
     let openGraph = {
-        title: data.fields.Tittle,
+        title: data.Tittle,
         description: description,
         url: link,
         siteName: 'Brahmbir',
         images: [
             {
-                url: data.fields.Image != undefined ? data.fields.Image[0].thumbnails.large.url : " ",
-                width: data.fields.Image[0].thumbnails.large.width,
-                height: data.fields.Image[0].thumbnails.large.height,
-                alt: `${data.fields.Tittle}'s photos`,
+                url: data.Image != undefined ? data.Image[0].url : " ",
+                width: data.Image[0].attributes.width,
+                height: data.Image[0].attributes.height,
+                alt: `${data.Tittle}'s photos`,
             },
         ],
         type: 'website',
     }
     return {
-        title: { absolute: data.fields.Tittle },
+        title: { absolute: data.Tittle },
         description: description,
         alternates: {
             canonical: link,
@@ -41,14 +54,14 @@ export async function generateMetadata({ params }) {
     }
 }
 
-const Page = async (props) => {
-    let result = await getData(props.params.work_id, props.searchParams.projectID)
+const Page = async ({params}) => {
+    let result = await getData(params.work_id).catch(()=>{notFound()})
     return (
         <main>
             <section className={styles.proSect}>
-                <ProjectTop data={result.Work.fields} />
-                <ProMarkDown Markdown={result.Proj.fields.Markdown} />
-                {(result.Proj.fields.Goal || result.Proj.fields.Solution) && <Conclusion Goal={result.Proj.fields.Goal} Solution={result.Proj.fields.Solution} />}
+                <ProjectTop data={result} />
+                <ProMarkDown Markdown={result.Projectdata.Markdown} />
+                {(result.Projectdata.Goal || result.Projectdata.Solution) && <Conclusion Goal={result.Projectdata.Goal} Solution={result.Projectdata.Solution} />}
             </section>
             <ContactSection />
         </main>

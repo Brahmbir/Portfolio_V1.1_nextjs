@@ -4,17 +4,37 @@ import { getXataClient } from "@/utils/xata";
 const xata = getXataClient();
 
 export const GET = async (request) => {
-            
-    switch (request.nextUrl.searchParams.get("type")) {
-    // switch ("all") {
+    let data;
+    let Tag = request.nextUrl.searchParams.get("type")
+
+    switch (Tag) {
         case 'all':
-            // data = (await table.select({sort: [{ field: "created_on", direction: "desc" }]}).all()).map(record=>record._rawJson);
+            data = await xata.db.AllWorkTable.select([
+                "id",
+                "Image.id",
+                "Image.name",
+                "Image.url",
+                "Tittle",
+                "Tags",
+                "Description",
+                "Github",
+              ]).filter({isHidden:false}).sort('createData', 'desc').getMany();
             break;
         default:
-            // data = (await table.select({sort: [{ field: "created_on", direction: "desc" }],filterByFormula:`FIND("${request.nextUrl.searchParams.get("type")}" ,{Type} )`}).all()).map(record=>record._rawJson);
+            data = await xata.db.AllWorkTable.select([
+                "id",
+                "Image.id",
+                "Image.name",
+                "Image.url",
+                "Tittle",
+                "Tags",
+                "Description",
+                "Github",
+              ]).filter({
+                isHidden:false,
+                Tags:{$includes : Tag },
+            }).sort('createData', 'desc').getMany();
             break;
         }
-        // data = data.filter(e => !e.fields.isHidden)
-        
-    return new NextResponse( JSON.stringify(data),{ status: 200 })
+    return new NextResponse( data,{ status: 200 })
 }

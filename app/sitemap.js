@@ -5,7 +5,7 @@ const xata = getXataClient();
 async function getDataForSitemap(){
     const data = await xata.db.AllWorkTable.select([
       "id"
-      ]).filter({isHidden:false}).getMany()
+      ]).filter({isHidden:false}).getAll()
       return data
 }
 

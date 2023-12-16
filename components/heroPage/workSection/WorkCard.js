@@ -6,9 +6,9 @@ import { GoArrowUpRight } from "react-icons/go"
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-
-const WorkCard = ({ id, fields }) => {
-    let link = `/work/${id}?projectID=${fields.ProjectTableLink[0]}`
+const WorkCard = ({Sdata}) => {
+    let data = JSON.parse(Sdata)
+    let link = `/work/${data.id}`
     return (
         <motion.div
             initial={{ x: 200, opacity: 0, filter: "blur(7.5px)" }}
@@ -18,14 +18,13 @@ const WorkCard = ({ id, fields }) => {
             className={styles.card}>
             <div className={styles.noImg}>
                 <div className={styles.head}>
-                    <h3>{fields.Tittle}</h3>
+                    <h3>{data.Tittle}</h3>
                     <div className={styles.tag}>
-                        {fields.Tags.map((item, i) => <span key={"qwe" + i} >{item}</span>)}
+                        {data.Tags.map((item, i) => <span key={"qwe" + i} >{item}</span>)}
                     </div>
                 </div>
                 <p className={styles.desc}>
-                    {fields.Description}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos doloremque a fuga accusamus. Voluptatibus velit voluptates fuga esse consequuntur doloribus
+                    {data.Description}
                 </p>
                 <Link href={link} className={styles.link} >
                     <p>Learn More</p>
@@ -34,7 +33,7 @@ const WorkCard = ({ id, fields }) => {
             </div>
             <div className={styles.image}>
                 <div className={styles.imgNEXT}>
-                    {fields.Image && <Image fill={true} sizes="50vw" src={fields.Image[0].url} alt={fields.Tittle} />}
+                    {data.Image && <Image fill={true} sizes="50vw" src={data.Image[0].url} alt={data.Image[0].name} />}
                 </div>
             </div>
         </motion.div>

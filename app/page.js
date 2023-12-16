@@ -3,7 +3,7 @@ import HeroSect from "@/components/heroPage/heroSection/HeroSect"
 import AboutSect from "@/components/heroPage/aboutSection/AboutSect"
 import WorkSect from "@/components/heroPage/workSection/WorkSect"
 
-import { base } from "@/utils/Airtable";
+import { getXataClient } from "@/utils/xata";
 
 export const metadata = {
   title: {
@@ -32,15 +32,18 @@ export const metadata = {
       },
   }
 }
-async function getWorkData() {
-  const data = await base("tblgok5mwLDBss8j7").select({
-      maxRecords: 3, sort: [
-          { field: "isHidden", direction: "asc" },
-          { field: "created_on", direction: "desc" }
-      ]
-  }).firstPage()
 
-  return data.map(record => record._rawJson).filter(e => !e.fields.isHidden);
+const xata = getXataClient();
+
+async function getWorkData(){
+    const data = await xata.db.AllWorkTable.select([
+        "Tittle",
+        "Tags",
+        "Description",
+        "Image",
+        "ProjectTableLink.id",
+      ]).filter({isHidden:false}).sort("createData",'desc').getMany({pagination: { size: 2 }})
+        return data;
 }
 
 export default async function Page() {
