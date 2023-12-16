@@ -1,4 +1,6 @@
 .proSect {
+  display: flex;
+  flex-direction: column;
   padding-top: min(15vh, calc(1.5 * 144px));
   width: calc(100% - calc(2 * min(8vw, 120px)));
   margin-inline: min(8vw, 120px);
@@ -11,6 +13,7 @@
 }
 
 .proPara {
+  background-color: var(--background);
   border: 1px solid var(--text);
   margin-top: 1.5em;
   padding: 1em 2em;
@@ -24,7 +27,7 @@
 .proSummary {
   margin-top: 2em;
   padding: 2em;
-  background-color: var(--primary);
+  background-color: var(--dprimary);
 }
 .proSummary > h3 {
   margin: 0px;
@@ -46,7 +49,7 @@
 }
 .GS p::before {
   position: absolute;
-  inset: -30% auto auto 0%;
+  inset: -0.25em auto auto 0%;
   z-index: -1;
   font-size: 2.5em;
   font-weight: 700;
@@ -60,8 +63,22 @@
 }
 @media screen and (max-width: 800px) {
   .proGS {
-    gap: 3em;
     flex-direction: column;
+    gap: 2.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .proSummary {
+    padding-inline: 1em;
+  }
+  .proPara {
+    padding: 0.5em 1em;
+  }
+  .GS p {
+    padding-inline: 0.25em;
+  }
+  .proGS {
+    display: flex;
   }
 }
 @media screen and (max-width: 400px) {

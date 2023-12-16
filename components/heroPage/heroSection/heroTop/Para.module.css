@@ -20,12 +20,13 @@
   gap: 1em;
 }
 .but a {
+  display: inline-block;
   text-align: center;
-  height: 3.5em;
+  height: 3.25em;
   min-width: 125px;
   border-radius: 1000px;
-  padding-block: 1.1em;
-  padding-inline: 1.5em;
+  padding-block: 1em;
+  padding-inline: 1em;
   width: fit-content;
   font-weight: 500;
   word-spacing: -0.08em;

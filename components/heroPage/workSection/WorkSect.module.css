@@ -25,8 +25,8 @@
   padding: 3em;
   margin-inline: 1.5em;
   border-radius: 1em;
-  /* background-color: #444463; */
-  background-color: #2f2f44;
+  background-color: rgb(47, 47, 68);
+  box-shadow: rgba(138, 138, 202, 0.2) 0px 8px 24px;
 }
 
 .noImg {
@@ -115,6 +115,7 @@
   border-radius: 1em;
   position: relative;
   background-color: #9d9de1;
+  box-shadow: rgba(17, 12, 46, 0.45) 0px 48px 100px 0px;
 }
 .imgNEXT img {
   border-radius: 1em;
@@ -184,6 +185,8 @@
     font-size: 3em;
   }
   .card {
+    width: calc(100%);
+    margin-inline: 0em;
     padding: 1.5em;
   }
   .head h3 {

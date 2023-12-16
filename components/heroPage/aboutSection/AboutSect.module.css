@@ -108,3 +108,12 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  .read h3 {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .read p {
+    font-size: 1.3em;
+  }
+}

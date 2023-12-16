@@ -191,8 +191,14 @@
 }
 @media screen and (max-width: 500px) {
   .workCard {
-    padding-inline: 0px;
+    padding-inline: 1em;
+    padding-block: 0.75rem;
+    margin-bottom: 2rem;
   }
+  .workCard::before {
+    bottom: -1em;
+  }
+
   .head_tag {
     gap: 1em;
     flex-direction: column;
@@ -200,5 +206,10 @@
   .LOAD {
     padding-block: 2rem;
     align-items: end;
+  }
+}
+@media screen and (max-width: 400px) {
+  .workPara {
+    padding-inline: 0.25em;
   }
 }

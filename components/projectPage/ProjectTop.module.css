@@ -4,19 +4,17 @@
   --ratio: 16 / 10;
   display: flex;
   color: var(--text);
+  gap: 2em;
   width: calc(100%);
   height: fit-content;
   padding: 2em 1em 0em 1em;
-  margin-bottom: 10vh;
   justify-content: space-between;
 }
 .proDD {
-  margin-left: 2em;
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  max-height: 500px;
   padding-block: 1.25em;
   font-size: var(--BodySize);
   max-width: calc(60% - 2em);
@@ -27,7 +25,6 @@
   justify-content: center;
   width: 55%;
   aspect-ratio: var(--ratio);
-  max-height: 500px;
 }
 .Icont {
   backdrop-filter: blur(3.5px);

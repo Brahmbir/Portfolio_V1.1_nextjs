@@ -39,3 +39,8 @@
   width: calc(100% - 2 * var(--padding));
   max-height: calc(1440px - var(--menuheight));
 }
+@media screen and (max-width: 500px) {
+  .sect {
+    padding-top: calc(2 * var(--menuheight));
+  }
+}

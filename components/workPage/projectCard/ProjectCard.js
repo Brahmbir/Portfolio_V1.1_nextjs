@@ -4,7 +4,6 @@ import { motion as m } from "framer-motion"
 import Image from "next/image";
 
 function ProjectCard(props) {
-    console.log(props)
     let link = `/work/${props.id}`
     return (
         <m.div initial={{ y: 100, scaleY: 0.8, opacity: 0 }} viewport={{ once: true }} whileInView={{ y: 0, scaleY: 1, opacity: 1 }} className={styles.workCard}>

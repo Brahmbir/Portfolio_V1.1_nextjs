@@ -65,3 +65,10 @@
     border-radius: 0.5em;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .top {
+    margin-inline: calc(1.5 * var(--padding));
+    width: calc(100vw - 3 * var(--padding));
+  }
+}
