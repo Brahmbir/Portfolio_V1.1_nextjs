@@ -1,0 +1,12 @@
+{
+  "id": "mig_clun3g4889rldatuoheg",
+  "parentID": "mig_clun34c889rldatuohdg",
+  "checksum": "1:0ab1bd25ae7efa77ba9f9d4256822be6fdd287ab34c4c499d111a2e96a926304",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

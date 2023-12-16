@@ -1,0 +1,14 @@
+{
+  "id": "mig_cinq0ikduniieos9no20",
+  "parentID": "mig_cinbmdoa7fmhcg82dol0",
+  "checksum": "1:e0b1bada74561b8c699389291219a550b0ba9dad1c8f5da40d1af7bbfe9fa7e6",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "ProjectType",
+        "oldName": "type",
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

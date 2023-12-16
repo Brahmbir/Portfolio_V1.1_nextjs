@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun23npaej1upqflac0",
+  "parentID": "mig_clun1j4889rldatuohcg",
+  "checksum": "1:fa3bbc9f585ad7af95009c83638cd7648cb2dea66cf16f944c3c0a55bbcbb980",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Name",
+          "type": "string"
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun0cvpaej1upqflaa0",
+  "parentID": "mig_clun09fpaej1upqfla90",
+  "checksum": "1:0754e6fd9d9609e94360d416b4384cbe28b2fa492fbcfc9a3634efdaa3969c5f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Roles",
+          "type": "text"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

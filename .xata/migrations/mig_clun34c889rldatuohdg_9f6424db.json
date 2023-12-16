@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun34c889rldatuohdg",
+  "parentID": "mig_clun30vpaej1upqflag0",
+  "checksum": "1:9f6424db65c916696eb166420745154480228031ee790ee1db6e425c69a28247",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "LiveLink",
+          "type": "text"
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

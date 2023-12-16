@@ -1,0 +1,14 @@
+{
+  "id": "mig_cimjkvcduniieos9j700",
+  "parentID": "mig_cimjks8a7fmhcg82c0ag",
+  "checksum": "1:c56b0adfd37be4dc38aaf30b9b9a20deea0eebc961c6937ceab677472a3454af",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Tittle",
+        "oldName": "tittle",
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

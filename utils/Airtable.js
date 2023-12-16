@@ -1,11 +1,5 @@
 const Airtable = require("airtable");
 
-// Authenticate
-Airtable.configure({
-  apiKey: process.env.AIRTABLE_TOKEN,
-});
+const Base = new Airtable({endpointUrl: 'https://api.airtable.com',apiKey:  process.env.AIRTABLE_TOKEN}).base(process.env.AIRTABLE_BASE_ID);
 
-// Initialize a base
-const base = Airtable.base(process.env.AIRTABLE_BASE_ID);
-
-export { base };
+export default Base ;

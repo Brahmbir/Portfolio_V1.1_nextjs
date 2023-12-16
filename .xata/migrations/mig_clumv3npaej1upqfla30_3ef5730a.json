@@ -1,0 +1,16 @@
+{
+  "id": "mig_clumv3npaej1upqfla30",
+  "parentID": "mig_clumuu7paej1upqfla20",
+  "checksum": "1:3ef5730a027e987e32a918794473fd4c20e8abf639b924e5c04e45e7ae8a5ea6",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Github",
+          "type": "text"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

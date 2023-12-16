@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun09fpaej1upqfla90",
+  "parentID": "mig_clun01c889rldatuoh90",
+  "checksum": "1:6ec5fe337c2da50193dd6022c0608a4079402a619c1b3ee23f3a8a0dc0cd653c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Image",
+          "type": "file[]"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

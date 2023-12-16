@@ -1,0 +1,12 @@
+{
+  "id": "mig_clumu4k889rldatuoh5g",
+  "parentID": "mig_cisn1qkaivuqkhd2nb50",
+  "checksum": "1:57e0890f3b035fcd4b2f5d7c0f05c7539fe89dbe698b9809b9192c3a2a4fc888",
+  "operations": [
+    {
+      "addTable": {
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

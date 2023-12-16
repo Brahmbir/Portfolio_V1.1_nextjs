@@ -1,0 +1,16 @@
+{
+  "id": "mig_cimjfp0a7fmhcg82c08g",
+  "parentID": "mig_cimjev0a7fmhcg82c07g",
+  "checksum": "1:b412e4669e9c4406ccb377ade5a98920f53d3eb72f5e9eaf2413296004267825",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "tittle",
+          "type": "string"
+        },
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

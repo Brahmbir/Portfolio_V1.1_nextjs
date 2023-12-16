@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun0sk889rldatuoha0",
+  "parentID": "mig_clun0lfpaej1upqflab0",
+  "checksum": "1:1527c8122419b655f364015d4135ec39bf2fd09707e0d03cc44201451df98bba",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Tittle",
+          "type": "string"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

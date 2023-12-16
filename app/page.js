@@ -3,6 +3,8 @@ import HeroSect from "@/components/heroPage/heroSection/HeroSect"
 import AboutSect from "@/components/heroPage/aboutSection/AboutSect"
 import WorkSect from "@/components/heroPage/workSection/WorkSect"
 
+import { base } from "@/utils/Airtable";
+
 export const metadata = {
   title: {
       template: '%s | Brahmbir',
@@ -30,13 +32,24 @@ export const metadata = {
       },
   }
 }
+async function getWorkData() {
+  const data = await base("tblgok5mwLDBss8j7").select({
+      maxRecords: 3, sort: [
+          { field: "isHidden", direction: "asc" },
+          { field: "created_on", direction: "desc" }
+      ]
+  }).firstPage()
 
-export default function Page() {
+  return data.map(record => record._rawJson).filter(e => !e.fields.isHidden);
+}
+
+export default async function Page() {
+  let workdata = await getWorkData().catch(() => "error")
   return (
     <main>
       <HeroSect />
       <AboutSect />
-      <WorkSect />
+      <WorkSect workdata={workdata} />
       <ContactSection />
     </main>
   )

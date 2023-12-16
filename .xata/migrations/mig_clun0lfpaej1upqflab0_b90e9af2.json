@@ -1,0 +1,18 @@
+{
+  "id": "mig_clun0lfpaej1upqflab0",
+  "parentID": "mig_clun0cvpaej1upqflaa0",
+  "checksum": "1:b90e9af20146daf6fb85db0609591b7c705d4950fc9f39f70a836cd0200f4205",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "isHidden",
+          "type": "bool",
+          "notNull": true,
+          "defaultValue": "false"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

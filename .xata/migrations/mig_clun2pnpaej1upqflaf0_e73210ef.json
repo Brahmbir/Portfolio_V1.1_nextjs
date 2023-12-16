@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun2pnpaej1upqflaf0",
+  "parentID": "mig_clun2mnpaej1upqflae0",
+  "checksum": "1:e73210ef2a1884fbd123c7b24da896368170806f33e242c20824206e29d8b8e6",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Goal",
+          "type": "text"
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

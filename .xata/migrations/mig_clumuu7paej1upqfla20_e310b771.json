@@ -1,0 +1,16 @@
+{
+  "id": "mig_clumuu7paej1upqfla20",
+  "parentID": "mig_clumu4k889rldatuoh5g",
+  "checksum": "1:e310b771f44a5f66cfea0adc65be1aec1864f1e62459844b2c95cf6168302aaf",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "LiveLink",
+          "type": "text"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

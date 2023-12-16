@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun2mnpaej1upqflae0",
+  "parentID": "mig_clun2cvpaej1upqflad0",
+  "checksum": "1:f38408eb617e8b0bc81b39d3b3031e31ea1f6d131c94cedd7640666da2dcbf50",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Markdown",
+          "type": "text"
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

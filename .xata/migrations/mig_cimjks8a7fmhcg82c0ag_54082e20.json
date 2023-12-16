@@ -1,0 +1,14 @@
+{
+  "id": "mig_cimjks8a7fmhcg82c0ag",
+  "parentID": "mig_cimjko0mugpi3q18odk0",
+  "checksum": "1:54082e20170dab89e7526a358555751127e9bab1c0b959238f1316a857a42041",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "Tags",
+        "oldName": "tags",
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

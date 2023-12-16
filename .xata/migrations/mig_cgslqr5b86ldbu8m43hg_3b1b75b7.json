@@ -1,0 +1,18 @@
+{
+  "id": "mig_cgslqr5b86ldbu8m43hg",
+  "parentID": "mig_cfii9ggimbd42njtse0g",
+  "checksum": "1:3b1b75b7101b596dd10f9d67fce1f789fcdd4b5ed49938c96f868f0dd762bd82",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "data",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "0"
+        },
+        "table": "work"
+      }
+    }
+  ]
+}

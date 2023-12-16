@@ -1,0 +1,12 @@
+{
+  "id": "mig_cimjnr4duniieos9j740",
+  "parentID": "mig_cimjl90mugpi3q18odl0",
+  "checksum": "1:0e4409142ae3a92521c5ef353f0888f2286a5d94519fd92589857933478b2bec",
+  "operations": [
+    {
+      "addTable": {
+        "table": "projectDetails"
+      }
+    }
+  ]
+}

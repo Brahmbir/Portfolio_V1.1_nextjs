@@ -1,0 +1,19 @@
+{
+  "id": "mig_clun2cvpaej1upqflad0",
+  "parentID": "mig_clun23npaej1upqflac0",
+  "checksum": "1:221afc0af58021d200c6ddfa5abaaf16a1163d085c637795647f28434c83c648",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "AllWorkTable",
+          "type": "link",
+          "link": {
+            "table": "AllWorkTable"
+          }
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mig_cimjta0a7fmhcg82c2q0",
+  "parentID": "mig_cimjoi4duniieos9j750",
+  "checksum": "1:67355106015f0968cb7e4907d91aae70d901bfb1e7c2556d714f5966364c20ea",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "idFromWork",
+        "table": "projectDetails"
+      }
+    }
+  ]
+}

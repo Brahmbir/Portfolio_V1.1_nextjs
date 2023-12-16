@@ -1,0 +1,20 @@
+{
+  "id": "mig_cimjoi4duniieos9j750",
+  "parentID": "mig_cimjnr4duniieos9j740",
+  "checksum": "1:a3503e27929dbb364f7bbd7c07ff1add88b12481297172ab45455d88267cb1fd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "idFromWork",
+          "type": "link",
+          "link": {
+            "table": "allWorkData"
+          },
+          "unique": true
+        },
+        "table": "projectDetails"
+      }
+    }
+  ]
+}

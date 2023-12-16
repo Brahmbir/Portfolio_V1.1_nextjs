@@ -1,0 +1,12 @@
+{
+  "id": "mig_clun13s889rldatuohbg",
+  "parentID": "mig_clun0sk889rldatuoha0",
+  "checksum": "1:e917d9378edd40726432a6442d1488eb32341d68fd3be698746e57d181b19ac8",
+  "operations": [
+    {
+      "addTable": {
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}

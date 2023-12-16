@@ -1,0 +1,17 @@
+{
+  "id": "mig_cimjl90mugpi3q18odl0",
+  "parentID": "mig_cimjkvcduniieos9j700",
+  "checksum": "1:ed3a92e1a575e952b275b378110c9e32fb7f0ad0b97c84f20051068466768e86",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Github",
+          "type": "string",
+          "unique": true
+        },
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_clumvafpaej1upqfla40",
+  "parentID": "mig_clumv3npaej1upqfla30",
+  "checksum": "1:d59b749687e52f9021ac2933868dc1792868575ca5e0655588db84060391d81b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Description",
+          "type": "text"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

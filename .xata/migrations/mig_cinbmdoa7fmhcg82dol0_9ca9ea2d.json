@@ -1,0 +1,16 @@
+{
+  "id": "mig_cinbmdoa7fmhcg82dol0",
+  "parentID": "mig_cimjtpga7fmhcg82c2r0",
+  "checksum": "1:9ca9ea2d0ac83d8e1e018bad357fca3b56a41af64e9bf8d90851b6529ec349df",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "type",
+          "type": "multiple"
+        },
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

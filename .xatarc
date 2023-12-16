@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://Brahm-bir-Singh-s-workspace-fad51i.us-east-1.xata.sh/db/PortfolioData",
+  "codegen": {
+    "output": "utils/xata.js",
+    "moduleType": "esm"
+  }
+}

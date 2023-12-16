@@ -1,0 +1,20 @@
+{
+  "id": "mig_cimjtpga7fmhcg82c2r0",
+  "parentID": "mig_cimjta0a7fmhcg82c2q0",
+  "checksum": "1:c9bb8c97c29ba2b12c81d48db22713bbde3b1e3d9f399895bcef123e4fe64d63",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "linkToProject_ID",
+          "type": "link",
+          "link": {
+            "table": "projectDetails"
+          },
+          "unique": true
+        },
+        "table": "allWorkData"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_clumvms889rldatuoh80",
+  "parentID": "mig_clumvafpaej1upqfla40",
+  "checksum": "1:a6ff7fa0ae4cbf598d5a4b55061f7999debefa9ad825f2995048deda7e8019ba",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Language_Framework",
+          "type": "multiple"
+        },
+        "table": "AllWorkTable"
+      }
+    }
+  ]
+}

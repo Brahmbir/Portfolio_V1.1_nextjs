@@ -1,0 +1,16 @@
+{
+  "id": "mig_clun30vpaej1upqflag0",
+  "parentID": "mig_clun2pnpaej1upqflaf0",
+  "checksum": "1:fee48e009293b876e9c2b903a54f5c4260725aa26f8eba0af6be26962a03f29b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Solution",
+          "type": "text"
+        },
+        "table": "ProjectTable"
+      }
+    }
+  ]
+}
