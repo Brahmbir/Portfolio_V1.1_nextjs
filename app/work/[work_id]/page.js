@@ -2,7 +2,7 @@ import getData from '@/Function/getDataForProject';
 import getMetaData from "@/Function/getDataForMeta"
 
 import styles from "@/styles/projectPage/Project.module.css"
-import MarkDownStyles from "@/styles/projectPage/MarkDown.module.css"
+import MarkDownStyles from "@/styles/projectPage/Markdown.module.css"
 
 import ContactSection from '@/components/contactSection/ContactSection';
 import ProjectTop from "@/components/projectPage/ProjectTop"
