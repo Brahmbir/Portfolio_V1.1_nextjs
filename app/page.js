@@ -37,7 +37,7 @@ async function getWorkData(){
         "Description",
         "Image",
         "ProjectTableLink.id",
-      ]).filter({isHidden:false}).sort("createData",'desc').getMany({pagination: { size: 2 }})
+      ]).filter({isHidden:false}).sort("createData",'desc').getMany({pagination: { size: 3 }})
         return data;
 }
 
