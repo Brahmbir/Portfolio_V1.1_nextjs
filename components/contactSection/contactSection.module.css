@@ -20,8 +20,9 @@
   overflow: visible;
 }
 .text {
-  font-size: 48px;
-  /* font-size: 42.18px; */
+  font-size: 3.465rem;
+  /* font-size: 48px; */
+  text-align: center;
   padding: 0px;
   margin: 0px;
   height: 100%;
