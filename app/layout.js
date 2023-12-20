@@ -1,6 +1,7 @@
 import NavBar from '@/components/navBar/NavBar'
 import ChatComponent from '@/components/chatBox/ChatBox'
 import './globals.css'
+import AnimateP from '@/components/animateP'
 
 export const metadata = {
   title: {
@@ -45,7 +46,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <NavBar/>
+        <AnimateP>
         {children}
+        </AnimateP>
         <ChatComponent/>
         </body>
     </html>
