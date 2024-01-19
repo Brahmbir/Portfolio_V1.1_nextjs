@@ -23,9 +23,9 @@ Welcome to my portfolio! This repository showcases my skills, projects, and a bi
 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/Brahmbir/Portfolio_V1.1_nextjs.git
 
-cd your-portfolio
+cd Portfolio_V1.1_nextjs
 ```
 
 2. Install Dependencies:
