@@ -10,9 +10,13 @@ import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const WorkSect = () => {
-  const { data, error, isLoading } = useSWR(`/api/LatestProject`, fetcher, {
-    refreshInterval: 60000,
-  });
+  const { data, error, isLoading } = useSWR(
+    `/api/LatestProject?date=${new Date().toString()}`,
+    fetcher,
+    {
+      refreshInterval: 60000,
+    }
+  );
   return (
     <section className={styles.sect}>
       <h2>
@@ -51,6 +55,7 @@ const WorkSect = () => {
           </div>
         ) : (
           data.map((element, index) => {
+            console.log(data.rerenderDate);
             return <WorkCard key={"homePageWorkKey_" + index} {...element} />;
           })
         )}

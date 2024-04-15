@@ -41,7 +41,6 @@ pnpm install
 3. Create an `.env` file inside **Portfolio_V1.1_nextjs** folder and paste the folowing after filling you details
 
 ```bash
-
 # address of you site
 SITEURL="https://Domain.host"
 
