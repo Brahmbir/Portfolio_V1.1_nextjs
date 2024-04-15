@@ -10,7 +10,7 @@ import useSWR from "swr";
 const fetcher = (url) =>
   fetch(url, { cache: "no-store" }).then((res) => res.json());
 
-const WorkSect = asnyc () => {
+const WorkSect = () => {
   const { data, error, isLoading } = useSWR(`/api/LatestProject`, (url) =>
     fetcher(url)
   );
