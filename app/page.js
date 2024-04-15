@@ -3,8 +3,6 @@ import HeroSect from "@/components/heroPage/heroSection/HeroSect";
 import AboutSect from "@/components/heroPage/aboutSection/AboutSect";
 import WorkSect from "@/components/heroPage/workSection/WorkSect";
 
-import { getXataClient } from "@/utils/xata";
-
 export const metadata = {
   description:
     "Welcome to our Software Developer Student Site - Your Ultimate Resource for Aspiring Developers! Join a vibrant community of tech enthusiasts, where we share cutting-edge programming tutorials, industry insights, and career guidance. Enhance your coding skills with hands-on projects, and explore the latest trends in software development. Whether you're a beginner or an advanced coder, our comprehensive content caters to all levels. Start your journey towards becoming a proficient software developer today!",
@@ -30,7 +28,7 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+const HomePage = () => {
   return (
     <main>
       <HeroSect />
@@ -39,4 +37,6 @@ export default function Page() {
       <ContactSection />
     </main>
   );
-}
+};
+
+export default HomePage;

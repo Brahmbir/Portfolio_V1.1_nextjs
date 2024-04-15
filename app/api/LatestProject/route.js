@@ -14,6 +14,5 @@ export const GET = async (request) => {
     .filter({ isHidden: false })
     .sort("createData", "desc")
     .getMany({ pagination: { size: 3 } });
-  data;
   return new NextResponse(data, { status: 200 });
 };

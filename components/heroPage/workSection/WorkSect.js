@@ -7,13 +7,12 @@ import WorkCard from "./WorkCard";
 import WorkLink from "./WorkLink";
 import useSWR from "swr";
 
-const fetcher = (url) =>
-  fetch(url, { cache: "no-store" }).then((res) => res.json());
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const WorkSect = () => {
-  const { data, error, isLoading } = useSWR(`/api/LatestProject`, (url) =>
-    fetcher(url)
-  );
+  const { data, error, isLoading } = useSWR(`/api/LatestProject`, fetcher, {
+    refreshInterval: 60000,
+  });
   return (
     <section className={styles.sect}>
       <h2>
@@ -52,12 +51,7 @@ const WorkSect = () => {
           </div>
         ) : (
           data.map((element, index) => {
-            return (
-              <WorkCard
-                key={"homePageWorkKey_" + index}
-                {...element}
-              />
-            );
+            return <WorkCard key={"homePageWorkKey_" + index} {...element} />;
           })
         )}
       </div>

@@ -10,13 +10,13 @@ export const GET = async (request) => {
   switch (Tag) {
     case "all":
       data = await xata.db.AllWorkTable.select([
-        "id",
-        "Image.id",
-        "Image.name",
-        "Image.url",
         "Tittle",
         "Tags",
         "Description",
+        "Image.url",
+        "id",
+        "Image.id",
+        "Image.name",
         "Github",
       ])
         .filter({ isHidden: false })

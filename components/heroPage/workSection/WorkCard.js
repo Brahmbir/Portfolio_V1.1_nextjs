@@ -12,7 +12,7 @@ const WorkCard = (data) => {
     <motion.div
       initial={{ x: 200, opacity: 0, filter: "blur(7.5px)" }}
       whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ type: "tween", duration: 0.3 }}
       className={styles.card}
     >

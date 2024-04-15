@@ -19,14 +19,6 @@
   --menuheight: min(11%, 100px);
   --menutoppad: min(4vh, 20px);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --Mcolor: rgb(229, 223, 217);
-    
-  }
-} */
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -38,8 +30,8 @@ body {
   font-family: "Mona sans", sans-serif;
   max-width: 2560px;
   max-height: 1440px;
-  width: 100vw;
-  height: 100vh;
+  width: 100svw;
+  height: 100svh;
   margin: auto;
   display: flex;
   flex-direction: column;

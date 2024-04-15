@@ -9,7 +9,7 @@ import ProjectCard, {
 import useSWR from "swr";
 import { useState } from "react";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const FilterComponenet = () => {
   const [token, setToken] = useState("all");
@@ -17,7 +17,10 @@ const FilterComponenet = () => {
   let page = 1;
   const { data, error, isLoading } = useSWR(
     `/api/WorkTable?type=${token}&page=1`,
-    (url) => fetcher(url)
+    fetcher,
+    {
+      refreshInterval: 60000,
+    }
   );
   return (
     <>
