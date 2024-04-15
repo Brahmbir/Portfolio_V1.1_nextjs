@@ -40,12 +40,19 @@ pnpm install
 
 3. Create an `.env` file inside **Portfolio_V1.1_nextjs** folder and paste the folowing after filling you details
 
-```env
+```bash
 
-# kkm
+# address of you site
 SITEURL="https://Domain.host"
-XATA_BRANCH="main"
-XATA_API_KEY="xau_eEj9KyNpsFkW983m7I4ZQywubtQxtgDA0"
+
+# Xata {a database server} Api details
+XATA_BRANCH="branchName"
+XATA_API_KEY="*********************************"
+
+# social links
+INSTAGRAM=""
+GITHUB=""
+LINKEDIN=""
 ```
 
 4. Run the Development Server:
