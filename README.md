@@ -38,7 +38,17 @@ yarn install
 pnpm install
 ```
 
-3. Run the Development Server:
+3. Create an `.env` file inside **Portfolio_V1.1_nextjs** folder and paste the folowing after filling you details
+
+```env
+
+# kkm
+SITEURL="https://Domain.host"
+XATA_BRANCH="main"
+XATA_API_KEY="xau_eEj9KyNpsFkW983m7I4ZQywubtQxtgDA0"
+```
+
+4. Run the Development Server:
 
 ```bash
 npm run dev
@@ -48,7 +58,7 @@ yarn dev
 pnpm dev
 ```
 
-4. **Open in Your Browser**:
+5. **Open in Your Browser**:
    > Open [http://localhost:3000](http://localhost:3000) to view your portfolio.
 
 ## Contribution
