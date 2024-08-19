@@ -1,0 +1,90 @@
+.group {
+  box-sizing: border-box;
+  min-width: 100%;
+  display: grid;
+  gap: 7.5em;
+  margin-block: 5em;
+  padding-inline: var(--padding);
+  max-width: calc(var(--ma) - 2 * var(--padding));
+}
+
+.line {
+  display: block;
+  width: 5em;
+  max-width: 100px;
+  min-width: 50px;
+  height: 0.45em;
+  border-radius: 5em;
+  background: linear-gradient(
+    to right,
+    #592752,
+    #753059,
+    #903b5e,
+    #aa485f,
+    #c2585f,
+    #d4695d,
+    #e37c5b,
+    #ef9059,
+    #f8a858,
+    #fdc25a,
+    #fedd62,
+    #f9f871
+  );
+}
+.sect {
+  box-sizing: border-box;
+  width: 100%;
+}
+.sect > div {
+  display: grid;
+  gap: 0.75em;
+}
+
+.heading {
+  margin-top: 0.4em;
+  font-size: 3em;
+  font-weight: 600;
+  width: fit-content;
+  background: linear-gradient(to right, var(--accent) 50%, var(--light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.paras {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+.paras p {
+  color: var(--textdark);
+  line-height: 1.5em;
+  font-weight: 200;
+  font-size: 1.35em;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 800px) {
+  .paras {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .paras p {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body {
+    margin-block: 7.5em 0px;
+  }
+  .heading {
+    font-size: 2.5em;
+  }
+  .paras p {
+    font-size: 1.2rem;
+  }
+}

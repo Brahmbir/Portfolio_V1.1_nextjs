@@ -30,12 +30,12 @@ export const metadata = {
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <HeroSect />
       <AboutSect />
       <WorkSect />
       <ContactSection />
-    </main>
+    </>
   );
 };
 

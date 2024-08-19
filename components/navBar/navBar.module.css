@@ -4,7 +4,7 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   padding-top: min(4vh, 20px);
   padding-inline: min(8vw, 120px);

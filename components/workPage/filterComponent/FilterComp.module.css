@@ -6,7 +6,7 @@
   border-bottom: 0.5px solid var(--xlight);
   gap: 1em;
   overflow-x: hidden;
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
 }
 .selectTag button {
   text-transform: capitalize;

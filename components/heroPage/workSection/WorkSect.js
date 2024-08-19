@@ -26,7 +26,7 @@ const WorkSect = () => {
         {isLoading == true ? (
           // Loading component
           <div
-            className={styles.card}
+            className={styles.infocard}
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p style={{ fontSize: "1.5em", width: "fit-content" }}>
@@ -36,7 +36,7 @@ const WorkSect = () => {
         ) : error != undefined ? (
           // Error component
           <div
-            className={styles.card}
+            className={styles.infocard}
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p style={{ fontSize: "1.5em", width: "fit-content" }}>
@@ -46,7 +46,7 @@ const WorkSect = () => {
         ) : data.length == 0 ? (
           // Empty component
           <div
-            className={styles.card}
+            className={styles.infocard}
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p style={{ fontSize: "1.5em", width: "fit-content" }}>

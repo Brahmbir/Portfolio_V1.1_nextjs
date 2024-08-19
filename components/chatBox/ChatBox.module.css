@@ -1,15 +1,18 @@
 .chat {
   overflow: hidden;
-  z-index: 50;
-  position: absolute;
+  z-index: 500;
+  position: fixed;
   width: min(350px, calc(100vw - 80px));
   height: min(550px, 80vh);
   max-height: 80dvh;
   transition: all 0.4s;
-  inset: calc(min(11%, 100px) + 30px) min(8vw, 120px) auto auto;
+  inset: calc(min(11em, 100px) + 30px) auto auto auto;
+  left: calc(
+    calc(100% * 0.5 + calc(0.5 * min(100%, var(--max-width)))) - min(8em, 120px)
+  );
+
   transition-timing-function: cubic-bezier(1, 0.03, 0.48, 1);
   border: 1.25px solid var(--xlight);
-  /* outline: 2px solid var(--accent); */
 }
 .chat[data-show="false"] {
   height: 50px;

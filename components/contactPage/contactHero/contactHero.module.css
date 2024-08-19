@@ -1,10 +1,10 @@
 .contsectDetail {
   z-index: 1;
   width: calc(100%);
-  padding-top: min(27.5vh, calc(1.4 * 144px));
+  padding-top: min(27.5em, calc(1.4 * 144px));
   display: flex;
   flex-direction: column;
-  gap: 5.5vh;
+  gap: 3.5em;
   color: var(--text);
   align-items: center;
   justify-content: space-between;
@@ -17,9 +17,9 @@
   font-size: 4em;
   line-height: 80%;
   color: var(--text);
-  width: calc(100% - 2vw - 2 * var(--padding));
+  width: calc(100% - 2 * var(--padding));
   font-weight: 800;
-  padding-inline: 1vw;
+  padding-inline: 1em;
   transform: translate(0%, 30%);
 }
 .contsectDetail > h2::before {
@@ -35,7 +35,7 @@
 }
 .emailcosect {
   width: calc(100% - calc(2 * var(--padding)));
-  margin-block: 15vh 3vh;
+  margin-block: 5em 3vh;
   font-size: 1.7em;
   line-height: 125%;
 }
@@ -120,8 +120,8 @@
 }
 @media screen and (max-width: 700px) {
   .contsectDetail {
-    padding-top: min(25vh, calc(1.35 * 144px));
-    gap: 3vh;
+    padding-top: min(25em, calc(1.35 * 144px));
+    gap: 3em;
   }
   .contsectDetail > h2 {
     width: calc(100%);
@@ -130,7 +130,7 @@
     padding-inline: 0vw;
   }
   .emailcosect {
-    margin-block: 10vh 3vh;
+    margin-block: 4.5em 3em;
     width: calc(100%);
     font-size: 1.3em;
   }

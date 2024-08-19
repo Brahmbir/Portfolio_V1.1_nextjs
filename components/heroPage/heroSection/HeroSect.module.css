@@ -1,15 +1,15 @@
 .whole {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   position: relative;
 }
 .img {
   overflow: hidden;
   position: absolute;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 .img::after {
   position: absolute;
@@ -17,7 +17,7 @@
   bottom: 0%;
   left: 0%;
   content: " ";
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 25%;
   background-image: linear-gradient(
     to top,
@@ -33,8 +33,9 @@
   object-fit: cover;
 }
 .sect {
+  position: relative;
   padding-top: var(--menuheight);
-  z-index: 1;
+  z-index: 2;
   margin-inline: var(--padding);
   width: calc(100% - 2 * var(--padding));
   max-height: calc(1440px - var(--menuheight));

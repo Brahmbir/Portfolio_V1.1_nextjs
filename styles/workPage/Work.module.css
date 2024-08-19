@@ -6,7 +6,7 @@
   padding-inline: var(--padding);
 }
 .workIntro {
-  padding-bottom: 3rem;
+  padding-bottom: 2.5em;
 }
 .workIntro span,
 .tags div {
@@ -23,5 +23,6 @@
   font-size: 3rem;
 }
 .workIntro p {
+  font-size: 1.25rem;
   color: var(--textdark);
 }

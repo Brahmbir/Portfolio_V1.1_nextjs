@@ -1,29 +1,36 @@
 .conform {
-  margin-block: min(10vh, 100px);
+  margin-block: min(3em, 70px);
   width: calc(100%);
-  padding-inline: min(8vw, 120px);
+  padding-inline: var(--padding);
   color: var(--text);
 }
-.conform > h3 {
+.conform > div {
+  width: 100%;
+  font-weight: 100;
+  font-size: 1.5em;
+  position: relative;
+}
+.conform > div > h3 {
   position: relative;
   margin-inline: auto;
   width: fit-content;
   font-weight: 100;
   z-index: 10;
-  margin-bottom: 7.5vh;
-  font-size: 1.5em;
+  margin-bottom: 4em;
+  font-size: 1em;
 }
-.conform > h3::before,
-.conform > h3::after {
+.conform > div::before,
+.conform > div::after {
   position: absolute;
-  width: calc(calc(calc(100vw - calc(4 * var(--padding))) / 2) - 50%);
+  width: calc(50% - 9ch);
   height: 100%;
   border-top: 1px solid var(--text);
   content: "  ";
+  inset: 0 0 auto auto;
   transform: translate(-0%, 50%);
 }
-.conform > h3::before {
-  transform: translate(-100%, 50%);
+.conform > div::before {
+  inset: 0;
 }
 .conform fieldset {
   margin: 0px;

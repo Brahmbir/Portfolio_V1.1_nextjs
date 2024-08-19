@@ -1,9 +1,9 @@
 .proSect {
   display: flex;
   flex-direction: column;
-  padding-top: min(15vh, calc(1.5 * 144px));
-  width: calc(100% - calc(2 * min(8vw, 120px)));
-  margin-inline: min(8vw, 120px);
+  padding-top: min(15em, calc(1.5 * 144px));
+  width: calc(100% - calc(2 * var(--padding)));
+  margin-inline: var(--padding);
   color: var(--text);
   position: relative;
 }
@@ -15,7 +15,7 @@
 .proPara {
   background-color: var(--background);
   border: 1px solid var(--text);
-  margin-top: 1.5em;
+  margin-top: 2.5em;
   padding: 1em 2em;
   width: calc(100%);
   font-size: 1.3em;
