@@ -1,5 +1,5 @@
 .footer {
-  width: calc(100% - calc(0 * min(8vw, 120px)));
+  width: 100%;
   padding-inline: 0px;
   display: flex;
   color: var(--text);

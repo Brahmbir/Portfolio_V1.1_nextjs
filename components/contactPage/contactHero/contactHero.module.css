@@ -46,7 +46,7 @@
   margin-bottom: 0px;
 }
 .reachme {
-  width: calc(100% - calc(2 * min(8vw, 120px)));
+  width: calc(100% - calc(2 * var(--padding)));
 }
 .reachme > h3 {
   margin: 0;

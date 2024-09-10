@@ -7,7 +7,7 @@
   z-index: 1000;
   top: 0;
   padding-top: min(4vh, 20px);
-  padding-inline: min(8vw, 120px);
+  padding-inline: var(--padding);
   width: calc(100%);
   backdrop-filter: blur(16px) saturate(110%);
   -webkit-backdrop-filter: blur(16px) saturate(110%);

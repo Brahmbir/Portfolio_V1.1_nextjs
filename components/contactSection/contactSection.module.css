@@ -9,7 +9,7 @@
 }
 .letsT {
   margin-top: min(9%, 200px);
-  margin-inline: min(8vw, 120px);
+  margin-inline: var(--padding);
   position: relative;
   height: 25%;
   display: flex;

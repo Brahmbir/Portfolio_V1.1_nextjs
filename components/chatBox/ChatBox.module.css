@@ -8,7 +8,7 @@
   transition: all 0.4s;
   inset: calc(min(11em, 100px) + 30px) auto auto auto;
   right: calc(
-    calc(100% * 0.5 - calc(0.5 * min(100%, var(--max-width)))) + min(8em, 120px)
+    calc(100% * 0.5 - calc(0.5 * min(100%, var(--max-width)))) + var(--padding)
   );
 
   transition-timing-function: cubic-bezier(1, 0.03, 0.48, 1);
