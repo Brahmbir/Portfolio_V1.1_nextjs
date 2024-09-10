@@ -11,7 +11,7 @@ const ContactForm = () => {
 
       <form
         method="POST"
-        action="https://formsubmit.co/brahmbir68@gmail.com"
+        action="https://formsubmit.co/brahmbir68+Hey@gmail.com"
         encType="multipart/form-data"
         id="klk"
         className={styles.contact_form}
@@ -28,7 +28,7 @@ const ContactForm = () => {
           <div className={`${styles.input_wrapper} ${styles.formMess}`}>
             <input
               type="text"
-              // name={styles["name_input"]}
+              name="name"
               placeholder=" "
               id={styles["name_input"]}
             />{" "}
@@ -38,7 +38,7 @@ const ContactForm = () => {
             <input
               type="email"
               id={styles["email_input"]}
-              // name={styles["email_input"]}
+              name="email"
               placeholder=" "
               pattern="[a-z\d][a-z.\d_-]*@[a-z\d_-]+(\.[a-z\d]+)*"
               required=""
@@ -58,7 +58,7 @@ const ContactForm = () => {
                   : e.target.setAttribute("data-empty", "true");
               }}
               id={styles["message_input"]}
-              // name={styles["message_input"]}
+              name="message"
               data-empty="true"
               rows={5}
               defaultValue=""
