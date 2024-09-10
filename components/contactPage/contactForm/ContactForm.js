@@ -19,6 +19,10 @@ const ContactForm = () => {
         noValidate=""
         data-test-cy="contact-form"
       >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="basic"></input>
+        <input type="text" name="_honey" style={{ display: "none" }}></input>
+        <input type="hidden" name="_next" value={process.env.SITEURL}></input>
         <fieldset>
           <legend>DETAILS</legend>
           <div className={`${styles.input_wrapper} ${styles.formMess}`}>
