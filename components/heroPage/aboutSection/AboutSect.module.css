@@ -47,23 +47,25 @@
   padding: 2.5em;
   display: flex;
   flex-direction: column;
-  gap: 1.25em;
+  gap: 0.75em;
 }
 .read h3 {
   font-size: 0.5rem;
   font-weight: 400;
+  margin-bottom: 1em;
 }
 .read p {
   width: 90%;
   color: var(--textdark);
+  line-height: 120%;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 .tagArea {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-block: 1.75em 0;
+  margin-block: 1.5em 0;
 }
 .infoPoint {
   border-left: 2.5px solid var(--accent);
@@ -117,6 +119,6 @@
     font-weight: 400;
   }
   .read p {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 }
