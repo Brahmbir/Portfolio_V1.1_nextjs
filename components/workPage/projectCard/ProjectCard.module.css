@@ -1,9 +1,13 @@
 .workCard {
-  background-color: #6968ab19;
+  background-color: #1f1f36ad;
+  outline-color: color-mix(in srgb, var(--accent) 75%, rgba(0, 0, 0, 0.5) 50%);
+  outline-width: 1.5px;
+  outline-style: solid;
+
   border-radius: 1.25em;
   position: relative;
   padding-inline: 2em;
-  padding-block: 2.5rem;
+  padding-block: 2.5em;
   margin-bottom: 2.5rem;
   width: 100%;
   display: flex;
@@ -107,19 +111,20 @@
   width: calc(55% - 0.5 * 1.5em);
   max-height: 100%;
   display: flex;
+  gap: 1em;
   flex-direction: column;
 }
 .head_tag {
   display: grid;
-  gap: 0.75em;
+  gap: 1em;
 }
 .workHead {
   padding: 0;
   margin: 0;
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 0.02em;
-  font-weight: 800;
+  font-weight: 700;
 }
 .tags {
   display: flex;
@@ -140,11 +145,19 @@
 }
 .workPara {
   overflow: hidden;
-  padding: 1em;
+  --linHei: 1.4em;
+  padding-inline: 0.5em;
   flex: 1;
-  font-weight: 200;
-  line-height: 1.675em;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: var(--linHei);
   text-overflow: ellipsis;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* number of lines to show */
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 .workBut {
   width: 100%;
@@ -163,8 +176,16 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   padding-block: 0.5em;
+  padding-inline: 0.5em;
   font-size: 1.2em;
   position: relative;
+  border-width: 0;
+  border-color: color-mix(in srgb, var(--accent) 75%, rgba(0, 0, 0, 0.5) 50%);
+  border-style: solid;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+
+  border-top-left-radius: 0.2em;
 }
 .wmore {
   margin-right: 1em;
@@ -195,7 +216,7 @@
 }
 .workTo:hover::before {
   background-color: var(--primary);
-  width: 100%;
+  width: 80%;
 }
 
 @media screen and (max-width: 800px) {

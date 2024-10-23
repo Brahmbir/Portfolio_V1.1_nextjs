@@ -5,57 +5,53 @@
 .sect > h2 {
   width: 100%;
   font-size: 6em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.8em;
   border-bottom: 1px solid var(--light);
 }
 .workArea {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
-  margin-bottom: 8em;
+  gap: 3.4em;
+  margin-bottom: 6em;
 }
 .card,
 .infocard {
+  --CardPad: 3em;
+  --CardMar: 1.5em;
   overflow: hidden;
-  display: flex;
-  justify-content: space-between;
   width: calc(100% - 3em);
-  padding: 3em;
+  padding: var(--CardPad);
   margin-inline: 1.5em;
   border-radius: 1em;
-  background-color: rgb(47, 47, 68);
-  box-shadow: rgba(138, 138, 202, 0.2) 0px 8px 24px;
+  background-color: #1f1f36ad;
+  box-shadow: hsla(240, 53%, 45%, 0.272) 0px 8px 24px;
+  outline-color: color-mix(in srgb, var(--accent) 75%, rgba(0, 0, 0, 0.5) 50%);
+  outline-width: 1px;
+  outline-style: solid;
+  position: relative;
 }
-@media screen and (min-width: 800px) {
-  .card {
-    aspect-ratio: 16/9;
-  }
+.infocard {
+  display: flex;
+  justify-content: space-between;
 }
-@media screen and (min-width: 1000px) {
-  .card {
-    aspect-ratio: 16/8;
-  }
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 @media screen and (min-width: 1200px) {
   .card {
-    aspect-ratio: 16/6;
+    grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width: 1440px) {
-  .card {
-    aspect-ratio: 16/5.25;
-  }
-}
-
 .noImg {
-  width: 47.5%;
+  z-index: 100;
   max-width: calc(256px * 4.57);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5em;
+  gap: 1.6em;
 }
 .head {
   display: flex;
@@ -63,39 +59,38 @@
   gap: 0.75em;
 }
 .desc {
+  font-size: 1.2em;
+  line-height: 1.3em;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 6; /* number of lines to show */
   line-clamp: 6;
   -webkit-box-orient: vertical;
 }
-.head span,
-.desc,
 .link {
   font-size: 1.25em;
 }
 .tag {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
 }
 .tag span {
-  /* line-height: 1em; */
   width: fit-content;
+  height: fit-content;
+  padding: 0.2em 0.7em;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  background-color: #2a2a8958;
+  color: #c4c4ed;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding-inline: 0.75em;
+  font-size: 1.1em;
   text-align: center;
-  height: 1.3em;
-  line-height: 1.3em;
-  margin: 0;
-  border-radius: 3em;
-  background-color: var(--secondary);
-  font-weight: 200;
 }
 .head h3 {
-  font-size: 3em;
+  font-size: 2.6em;
 }
 .link {
   padding: 0.5em 2em;
@@ -122,14 +117,14 @@
   scale: 1.5;
 }
 .image {
+  z-index: 10;
   overflow: visible;
-  width: 47.5%;
   max-width: calc(256px * 4.57);
   position: relative;
 }
 .imgNEXT {
-  width: calc(100% + 3em);
-  height: calc(100% + 3em);
+  width: calc(110% + var(--CardPad));
+  height: calc(110% + var(--CardPad));
   margin: 1.25em 0em 0em 1.25em;
   border-radius: 1em;
   position: relative;
@@ -172,12 +167,49 @@
   scale: 2;
 }
 
+@media screen and (min-width: 1200px) {
+  .noImg {
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .noImg {
+    width: 60%;
+    padding: 0em;
+  }
+  .image {
+    position: absolute;
+    left: calc(60%);
+    top: calc(var(--CardPad));
+    width: min(80%, 30em);
+    height: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    gap: 2em;
+  }
+  .noImg {
+    width: 80%;
+    padding: 1em;
+  }
+  .image {
+    inset: 0;
+    position: relative;
+    justify-self: right;
+    width: min(85.5%);
+    aspect-ratio: 1/0.5;
+  }
+}
 @media screen and (max-width: 850px) {
   .sect > h2 {
     font-size: 4.5em;
   }
   .head h3 {
-    font-size: 2em;
+    font-size: 2.3em;
   }
   .card {
     padding: 1.5em;
@@ -189,41 +221,19 @@
   }
 
   .head h3 {
-    font-size: 2.5em;
-  }
-  .tag {
-    gap: 0.75em;
-  }
-  .card {
-    flex-direction: column;
-    gap: 2em;
-  }
-  .noImg {
-    width: 100%;
-  }
-  .image {
-    width: 100%;
-    aspect-ratio: 1/0.7;
+    font-size: 2.1em;
   }
 }
 @media screen and (max-width: 500px) {
-  .tag {
-    gap: 0.5em;
-  }
   .sect > h2 {
     font-size: 3em;
   }
   .card {
     width: calc(100%);
     margin-inline: 0em;
-    padding: 1.5em;
+    padding: 0.75em;
   }
   .head h3 {
-    font-size: 2em;
-  }
-  .head span,
-  .desc,
-  .link {
-    font-size: 0.8em;
+    font-size: 1.7em;
   }
 }
