@@ -9,10 +9,10 @@ const MaskBg = ({ children }) => {
     if (!DotRef.current) return;
 
     const TOP = box[0].top > 0 ? box[0].top : -box[0].top;
-
+    const LEFT = box[0].left;
     DotRef.current.animate(
       {
-        left: `${box[0].left + data.clientX || "0"}px`,
+        left: `${data.clientX - LEFT || "0"}px`,
         top: `${TOP + data.clientY || "0"}px`,
       },
       { duration: 5000, fill: "forwards" }
