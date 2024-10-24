@@ -84,6 +84,9 @@
   aspect-ratio: 16/10;
   background-color: #4e4cb86f;
   animation: blink 0.5s infinite alternate linear;
+  outline-color: color-mix(in srgb, var(--xlight) 75%, rgba(0, 0, 0, 0.5) 50%);
+  outline-width: 1.5px;
+  outline-style: solid;
 }
 @keyframes blink {
   from {
@@ -179,13 +182,6 @@
   padding-inline: 0.5em;
   font-size: 1.2em;
   position: relative;
-  border-width: 0;
-  border-color: color-mix(in srgb, var(--accent) 75%, rgba(0, 0, 0, 0.5) 50%);
-  border-style: solid;
-  border-top-width: 1.5px;
-  border-left-width: 1.5px;
-
-  border-top-left-radius: 0.2em;
 }
 .wmore {
   margin-right: 1em;
@@ -206,8 +202,8 @@
   border-radius: 1em;
   left: 50%;
   top: 1.9em;
-  width: 0%;
-  height: 0.1em;
+  width: 15%;
+  height: 0.2em;
   background-color: var(--text);
   transition: all 0.3s;
 }
@@ -217,6 +213,7 @@
 .workTo:hover::before {
   background-color: var(--primary);
   width: 80%;
+  height: 0.1em;
 }
 
 @media screen and (max-width: 800px) {
@@ -236,11 +233,17 @@
   .workDes {
     width: calc(100%);
   }
+  .wmore::after {
+    right: -12.5%;
+  }
+  .wmore:hover::after {
+    right: -20%;
+  }
 }
 @media screen and (max-width: 500px) {
   .workCard {
     padding-inline: 1em;
-    padding-block: 0.75rem;
+    padding-block: 1em;
     margin-bottom: 2rem;
   }
   .workCard::before {
