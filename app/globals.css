@@ -71,3 +71,48 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.maskCont {
+  position: relative;
+  z-index: 10;
+}
+.maskBg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(#0000 1%, #000, #0000 99%);
+  mask-image: linear-gradient(#0000 1%, #000, #0000 99%);
+}
+.maskBg::after,
+.maskBg:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: color-mix(in srgb, #17171b 10%, #17171b00 100%);
+  -webkit-backdrop-filter: blur(2em);
+  backdrop-filter: blur(2em);
+}
+.maskBg::after {
+  -webkit-backdrop-filter: blur(0.5em);
+  backdrop-filter: blur(0.5em);
+  /* opacity: 0; */
+  z-index: -1;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' transform='scale(1)'%3E%3Cdefs%3E%3Cpattern id='a' patternUnits='userSpaceOnUse' width='40' height='68.436' patternTransform='scale(1) rotate(0)'%3E%3Cpath d='M20 68.436V55.93c0-4.071 2.36-7.847 6.372-10.03C31.092 43.244 36.46 41.533 40 34.218v12.507c0 4.071-2.36 7.847-6.372 10.03C28.85 59.41 23.481 61.179 20 68.436zm0-17.108V38.82c0-4.07-2.36-7.846-6.372-10.03C8.908 26.137 3.54 24.426 0 17.11v12.507c0 4.07 2.36 7.846 6.372 10.03C11.15 42.3 16.519 44.07 20 51.326z' stroke-width='1' stroke='none' fill='%23fff'/%3E%3Cpath d='M20 85.545V73.038c0-4.07-2.36-7.847-6.372-10.03C8.908 60.354 3.54 58.643 0 51.327v12.507c0 4.071 2.36 7.847 6.372 10.03C11.15 76.519 16.519 78.289 20 85.545zm0-68.436V4.602c0-4.07-2.36-7.847-6.372-10.03C8.908-8.082 3.54-9.793 0-17.108v12.506C0-.53 2.36 3.245 6.372 5.428 11.15 8.083 16.519 9.853 20 17.109zm0 17.11V21.71c0-4.07 2.36-7.846 6.372-10.03C31.092 9.028 36.46 7.317 40 .002v12.507c0 4.07-2.36 7.846-6.372 10.03C28.85 25.191 23.481 26.961 20 34.217z' stroke-width='1' stroke='none' fill='%23fff'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' transform='translate(0,0) scale(3)' fill='url(%23a)'/%3E%3C/svg%3E");
+}
+.maskBg:before {
+  -webkit-backdrop-filter: blur(2em);
+  backdrop-filter: blur(2em);
+  z-index: -2;
+  background-color: color-mix(in srgb, var(--background) 75%, #17171b00 100%),
+    linear-gradient(var(--background) 5%, #0000, var(--background) 95%);
+}
+.dot {
+  position: absolute;
+  z-index: -10;
+  width: 7.5em;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  backdrop-filter: blur(2em);
+  -webkit-backdrop-filter: blur(2em);
+  background: radial-gradient(circle, #9d9de1ba 15%, #9d9de100 75%);
+  border-radius: 100vmax;
+}

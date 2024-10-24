@@ -2,6 +2,7 @@ import ContactSection from "@/components/contactSection/ContactSection";
 import HeroSect from "@/components/heroPage/heroSection/HeroSect";
 import AboutSect from "@/components/heroPage/aboutSection/AboutSect";
 import WorkSect from "@/components/heroPage/workSection/WorkSect";
+import MaskBg from "@/components/heroPage/MaskBg";
 
 export const metadata = {
   description:
@@ -32,8 +33,10 @@ const HomePage = () => {
   return (
     <>
       <HeroSect />
-      <AboutSect />
-      <WorkSect />
+      <MaskBg>
+        <AboutSect />
+        <WorkSect />
+      </MaskBg>
       <ContactSection />
     </>
   );
