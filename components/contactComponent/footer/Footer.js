@@ -28,7 +28,7 @@ const ContactPageFooter = ({ className }) => {
                     </a>
                 </li>
             </ul>
-            <div className={styles.copyright}> ©️2022 Made by Brahm_bir</div>
+            <div className={styles.copyright}> ©️2025 Made by Brahm_bir</div>
             <Logo className={styles.logo} />
         </footer>
     );
