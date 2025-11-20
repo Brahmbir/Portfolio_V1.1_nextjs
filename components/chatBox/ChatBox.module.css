@@ -2,22 +2,22 @@
   overflow: hidden;
   z-index: 500;
   position: fixed;
-  width: min(350px, calc(100vw - 80px));
-  height: min(550px, 80vh);
-  max-height: 80dvh;
+  width: min(350px, calc(100dvw - 80px));
+  height: min(550px, 75dvh);
+  max-height: 75dvh;
   transition: all 0.4s;
-  inset: calc(min(11em, 100px) + 30px) auto auto auto;
+  inset: calc(var(--menuheight) + 1em) auto auto auto;
   right: calc(
     calc(100% * 0.5 - calc(0.5 * min(100%, var(--max-width)))) + var(--padding)
   );
-
+  border-radius: 0.5em;
   transition-timing-function: cubic-bezier(1, 0.03, 0.48, 1);
   border: 1.25px solid var(--xlight);
 }
 .chat[data-show="false"] {
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
+  height: 3em;
+  width: 3em;
+  border-radius: 1.5em;
 }
 
 .chat[data-show="false"] .chatBox {
@@ -30,7 +30,7 @@
   padding: 0px;
   background-color: var(--secondary);
   min-width: 100%;
-  height: min(600px, 80vh);
+  height: min(600px, 80dvh);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -38,9 +38,9 @@
   transition: background-color 0.4s;
 }
 .chatHead {
-  height: 50px;
-  padding-inline: 35px;
-  margin-block: 13px;
+  height: 3em;
+  padding-inline: 1em;
+  margin-block: 0.8em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -71,16 +71,16 @@
   align-items: center;
   background-color: transparent;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 4em;
+  height: 4em;
   padding: 0px;
   border: 0;
 }
 .chat[data-show="false"] .chatBox > .chatHead > div > button {
-  inset: -19.5px -36.5px auto auto;
+  inset: -1.5em -1.5em auto auto;
 }
 .chat[data-show="true"] .chatBox > .chatHead > div > button {
-  inset: -5px 0px auto auto;
+  inset: -0.5em 0px auto auto;
 }
 .toggleBut > span {
   width: 100%;
@@ -116,11 +116,11 @@
   background-color: #12111f;
 }
 @media screen and (max-width: 450px) {
-  .chatHead {
+  /* .chatHead {
     padding-inline: 20px;
     transition: padding 0.3s;
   }
   .chat[data-show="false"] .chatHead {
     padding-inline: 35px;
-  }
+  } */
 }
