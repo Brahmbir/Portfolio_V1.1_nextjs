@@ -46,3 +46,8 @@
 .ResuLink:hover {
   background-color: rgba(var(--mlightRGB), 0.5);
 }
+@media screen and (max-width: 700px) {
+  .Para > div > p {
+    font-size: 1em;
+  }
+}

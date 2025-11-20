@@ -17,7 +17,7 @@
 }
 .into h1,
 .into span {
-  font-size: 4em;
+  font-size: 3.35em;
 }
 .into > div {
   margin-top: 2em;
@@ -75,6 +75,12 @@
   }
   .into h1,
   .into span {
-    font-size: 3em;
+    font-size: 2.25em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .into h2 {
+    font-size: 1em;
   }
 }

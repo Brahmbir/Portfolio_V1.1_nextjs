@@ -43,6 +43,32 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* iOS Safari (black/black-translucent/light) */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+
+        {/* iOS Safari Theme Color */}
+        <meta
+          name="theme-color"
+          content="#17171b"
+          media="(prefers-color-scheme: dark)"
+        />
+        <meta
+          name="theme-color"
+          content="#17171b"
+          media="(prefers-color-scheme: light)"
+        />
+
+        {/* iOS Safari Tab Bar color specifically */}
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        {/* Android Chrome */}
+        <meta name="theme-color" content="#17171b" />
+      </head>
       <body>
         <NavBar />
         <main>

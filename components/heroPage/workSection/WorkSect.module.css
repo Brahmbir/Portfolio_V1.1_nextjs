@@ -217,23 +217,42 @@
 }
 @media screen and (max-width: 700px) {
   .sect > h2 {
-    font-size: 3.5em;
-  }
-
-  .head h3 {
-    font-size: 2.1em;
-  }
-}
-@media screen and (max-width: 500px) {
-  .sect > h2 {
     font-size: 3em;
   }
   .card {
     width: calc(100%);
     margin-inline: 0em;
-    padding: 0.75em;
+    padding: 0.5em;
+    gap: 1.2em;
   }
+  .noImg {
+    padding: 0.5em;
+  }
+  .tag {
+    gap: 0.3em;
+  }
+  .tag span {
+    font-size: 0.75em;
+    padding: 0.2em 0.5em;
+  }
+
   .head h3 {
-    font-size: 1.7em;
+    font-size: 1.5em;
+  }
+  .desc {
+    font-size: 1em;
+  }
+  .link {
+    font-size: 1em;
+  }
+  .but {
+    font-size: 1em;
+    padding-block: 1.25em;
+    padding-inline: 2.5em;
+  }
+  .but p {
+    font-size: 1em;
+    font-weight: normal;
+    word-spacing: -0.08em;
   }
 }

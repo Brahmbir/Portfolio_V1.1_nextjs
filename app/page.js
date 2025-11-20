@@ -33,11 +33,11 @@ export const metadata = {
 const HomePage = () => {
   return (
     <>
-      {/* <HeroSect />
+      <HeroSect />
       <MaskBg>
         <AboutSect />
         <WorkSect />
-      </MaskBg> */}
+      </MaskBg>
       <ContactSection />
     </>
   );

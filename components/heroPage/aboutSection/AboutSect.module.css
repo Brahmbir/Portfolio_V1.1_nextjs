@@ -112,14 +112,17 @@
   }
   .read p {
     width: 100%;
+    font-size: 1em;
   }
-}
-@media screen and (max-width: 500px) {
   .read h3 {
     font-size: 0.75rem;
     font-weight: 400;
   }
-  .read p {
-    font-size: 1.4em;
+
+  .link {
+    font-size: 0.75rem;
+  }
+  .button {
+    font-size: 1em;
   }
 }

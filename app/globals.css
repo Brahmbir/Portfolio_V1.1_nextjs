@@ -126,6 +126,7 @@ a {
 .dot {
   position: absolute;
   width: 7.5em;
+  z-index: -10;
   transform: translate(-50%, -50%);
   aspect-ratio: 1;
   backdrop-filter: blur(2em);

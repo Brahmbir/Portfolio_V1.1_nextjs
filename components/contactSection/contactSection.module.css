@@ -13,9 +13,10 @@
   position: relative;
   height: 25%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .lets_talk {
+  margin-inline: auto;
   width: 100%;
   height: auto;
   display: grid;
@@ -170,12 +171,11 @@
 @media screen and (max-width: 700px) {
   .contact {
     margin-top: 3em;
-    gap: 4em;
+    gap: 2.5em;
   }
   .condetail {
-    font-size: 0.8rem;
     padding-block: 2em;
-    gap: 4em;
+    gap: 2.5em;
     flex-direction: column;
     margin-inline: auto;
   }
@@ -185,6 +185,7 @@
   }
   .ranleft,
   .linkList {
+    font-size: 1em;
     justify-content: center;
     align-items: center;
     margin-block: 0px;
@@ -192,6 +193,9 @@
   }
   .linkList {
     width: 100%;
+  }
+  .linkList > a {
+    font-size: 1em;
   }
   .ranleft p {
     text-align: center;
