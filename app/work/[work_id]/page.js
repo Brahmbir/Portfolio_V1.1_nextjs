@@ -1,13 +1,12 @@
 import styles from "@/styles/projectPage/Project.module.css";
-import MarkDownStyles from "@/styles/projectPage/Markdown.module.css";
 
 import ContactSection from "@/components/contactSection/ContactSection";
 import ProjectTop from "@/components/projectPage/ProjectTop";
-import ReactMarkdown from "react-markdown";
 
 import { getXataClient } from "@/utils/xata";
 import { notFound } from "next/navigation";
 import { SiteURL } from "@/app/const";
+import { ProMarkDown } from "@/components/workPage/ProMarkDown/ProMarkDown";
 
 const xata = getXataClient();
 
@@ -93,13 +92,6 @@ function Conclusion({ Goal, Solution }) {
           </div>
         )}
       </div>
-    </div>
-  );
-}
-function ProMarkDown({ Markdown = "" }) {
-  return (
-    <div className={styles.proPara}>
-      <ReactMarkdown className={MarkDownStyles.markdown} children={Markdown} />
     </div>
   );
 }
