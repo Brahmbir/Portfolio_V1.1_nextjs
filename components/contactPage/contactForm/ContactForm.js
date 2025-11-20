@@ -1,4 +1,5 @@
 "use client";
+import { SiteURL } from "@/app/const";
 import styles from "./contactForm.module.css";
 import AttachmentInput from "@/components/contactComponent/attachmentInput/Attachment";
 
@@ -22,7 +23,7 @@ const ContactForm = () => {
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="basic"></input>
         <input type="text" name="_honey" style={{ display: "none" }}></input>
-        <input type="hidden" name="_next" value={process.env.SITEURL}></input>
+        <input type="hidden" name="_next" value={SiteURL}></input>
         <fieldset>
           <legend>DETAILS</legend>
           <div className={`${styles.input_wrapper} ${styles.formMess}`}>

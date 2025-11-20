@@ -49,11 +49,14 @@ export default function ExpSection() {
   return (
     <div className={styles.Econt}>
       <div className={styles.expArea}>
-        <ExpCard data="March 2019">Passed my 10th standard</ExpCard>
-        <ExpCard data="March 2021">Passed my 12th standard</ExpCard>
-        <ExpCard data="Currently">
-          Enrolled in GNDU for a B.tech <br /> in Computer Science
+        <ExpCard data="October 2025">
+          Full Stack Developer at <strong>SuperHumanRace</strong> – New Delhi
         </ExpCard>
+        <ExpCard data="July 2025">
+          Passed GNDU for a B.tech <br /> in Computer Science
+        </ExpCard>
+        <ExpCard data="March 2021">Passed my 12th standard</ExpCard>
+        <ExpCard data="March 2019">Passed my 10th standard</ExpCard>
       </div>
     </div>
   );

@@ -2,13 +2,14 @@ import NavBar from "@/components/navBar/NavBar";
 import ChatComponent from "@/components/chatBox/ChatBox";
 import "./globals.css";
 import AnimateP from "@/components/animateP";
+import { SiteURL } from "./const";
 
 export const metadata = {
   title: {
     template: "%s | Brahmbir",
     default: "Brahmbir",
   },
-  metadataBase: new URL(process.env.SITEURL),
+  metadataBase: new URL(SiteURL),
   creator: "Brahmbir Singh",
   category: "technology",
   icons: {

@@ -24,37 +24,41 @@
 }
 .letText {
   display: grid;
-}
-.text {
-  justify-self: center;
-  font-size: 3.25em;
   padding: 0px;
   margin: 0px;
-  height: 100%;
+  fill: currentColor;
+  justify-self: center;
   text-align: justify;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-wrap: nowrap;
-  color: var(--Mcolor);
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  font-size: clamp(2.25em, 4vw, 3.25em);
 }
+.starWrapper {
+  transform: translateX(0%) translateY(30%); /* stays stable */
+  width: clamp(2.25em, 4vw, 3.25em);
+}
+
 .star {
   position: absolute;
   inset: auto 50% 0px auto;
-  transform: translateX(50%) translateY(20%);
-  width: 40px;
-  aspect-ratio: 1/1;
-  animation: rote 20s infinite linear;
+  transform: translateX(50%) translateY(30%);
+  width: 10em;
+  min-width: min(10vw, calc(var(--max-width) / 7));
+  aspect-ratio: 1 / 1;
+  animation: spin 20s infinite linear;
 }
-@keyframes rote {
+
+@keyframes spin {
   from {
-    transform: translateX(50%) translateY(50%) rotate(0deg);
+    transform: translateX(50%) translateY(30%) rotateZ(0deg);
   }
   to {
-    transform: translateX(50%) translateY(50%) rotate(360deg);
+    transform: translateX(50%) translateY(30%) rotateZ(360deg);
   }
 }
 .condetail {
@@ -124,7 +128,7 @@
   display: flex;
   flex-direction: column;
   margin-block: auto;
-  padding-inline: calc(min(5vw, 30px) - 15px);
+  /* padding-inline: calc(min(5vw, 30px) - 15px); */
 }
 .linkList > a {
   height: 2em;

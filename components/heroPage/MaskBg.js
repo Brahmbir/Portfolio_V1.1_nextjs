@@ -49,9 +49,12 @@ const MaskBg = ({ children }) => {
   }, []);
   return (
     <div className="maskCont" ref={Container}>
+      <div className="border_bar"></div>
       <div className="maskBg">
         <span className="dot" ref={DotRef}></span>
       </div>
+      <div className="border_bar"></div>
+
       {children}
     </div>
   );
