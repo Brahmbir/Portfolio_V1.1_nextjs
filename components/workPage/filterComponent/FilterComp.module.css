@@ -26,6 +26,22 @@
 .selectTag button:hover {
   background-color: var(--mlight);
 }
+.workListCont {
+  display: grid;
+  gap: 2.5em;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 1100px) {
+  .workListCont {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .workListCont {
+    grid-template-columns: 1fr;
+  }
+}
 @media screen and (max-width: 700px) {
   .selectTag {
     padding-inline: 0px;

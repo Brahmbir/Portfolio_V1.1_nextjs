@@ -40,17 +40,19 @@ const FilterComponenet = () => {
           </button>
         ))}
       </div>
-      {isLoading == true ? (
-        <Loading />
-      ) : error != undefined ? (
-        <Error error={error} />
-      ) : data.length == 0 ? (
-        <EmptyResult />
-      ) : (
-        data.map((entry, i) => (
-          <ProjectCard index={i} {...entry} key={"PC" + entry.Tittle + i} />
-        ))
-      )}
+      <div className={styles.workListCont}>
+        {isLoading == true ? (
+          <Loading />
+        ) : error != undefined ? (
+          <Error error={error} />
+        ) : data.length == 0 ? (
+          <EmptyResult />
+        ) : (
+          data.map((entry, i) => (
+            <ProjectCard index={i} {...entry} key={"PC" + entry.Tittle + i} />
+          ))
+        )}
+      </div>
     </>
   );
 };
