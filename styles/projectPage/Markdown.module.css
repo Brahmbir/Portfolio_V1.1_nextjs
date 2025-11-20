@@ -27,13 +27,13 @@
   color: var(--text);
 }
 .markdown h1 {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 .markdown h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 .markdown h3 {
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 .markdown h4,
 .markdown h5,

@@ -1,4 +1,6 @@
 .file_attachment_wrapper {
+  border-radius: 0.5em;
+
   overflow: hidden;
   margin-bottom: 2rem;
   width: 100%;
@@ -38,7 +40,7 @@
 .file_attachment_wrapper .attach_button_text {
   display: flex;
   flex-direction: column;
-  font-size: max(10px, 1rem);
+  font-size: 1em;
   position: relative;
   transform: translateY(0%);
   transition: all 0.5s;
@@ -51,7 +53,7 @@
   color: var(--text);
   filter: opacity(40%);
   display: inline-block;
-  font-size: 0.6em;
+  font-size: 0.8em;
   left: 0;
   opacity: 0;
   position: absolute;
@@ -87,7 +89,7 @@
 #file_input[data-enter="true"] + label #attachment_name {
   display: block;
   color: #000;
-  font-size: 1.3em;
+  font-size: 1em;
   flex: 1;
 }
 #file_input[data-enter="true"] + label .attachment_delete {
@@ -118,6 +120,6 @@
 @media screen and (max-width: 700px) {
   .file_attachment_wrapper .attach_button_details {
     font-weight: 100 !important;
-    font-size: 0.5rem !important;
+    font-size: 0.6rem !important;
   }
 }

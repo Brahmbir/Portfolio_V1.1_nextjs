@@ -12,6 +12,7 @@ const ContantBox = ({ children }) => {
         <div className={styles.fornt}>{children}</div>
       </div>
       <div className={`${styles.BG} ${styles.film}`}>
+        <span className={styles.topbar}></span>
         <svg viewBox="0 0 100 100" style={{ display: "none" }}>
           <filter id="grain">
             <feTurbulence baseFrequency="0.60,0.90" result="colorNoise" />

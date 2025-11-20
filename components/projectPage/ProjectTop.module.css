@@ -1,6 +1,6 @@
 .proDetail {
-  --HeadSize: 2.2em;
-  --BodySize: 1.1em;
+  --HeadSize: 1.75em;
+  --BodySize: 1em;
   --ratio: 16 / 10;
   display: flex;
   color: var(--text);

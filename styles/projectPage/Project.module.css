@@ -1,15 +1,11 @@
 .proSect {
   display: flex;
   flex-direction: column;
-  padding-top: min(15em, calc(1.5 * 144px));
+  padding-top: 7.5em;
   width: calc(100% - calc(2 * var(--padding)));
   margin-inline: var(--padding);
   color: var(--text);
   position: relative;
-}
-.proSect > h2 {
-  margin: 0px;
-  font-size: 5em;
 }
 
 .proPara {
@@ -18,7 +14,6 @@
   margin-top: 2.5em;
   padding: 1em 2em;
   width: calc(100%);
-  font-size: 1.3em;
   box-shadow: 4px 4px 0px var(--text);
 }
 .proPara > * {

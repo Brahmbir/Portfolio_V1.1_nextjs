@@ -8,6 +8,24 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
+
+.topbar {
+  position: absolute;
+  --alpha: 0.8;
+  width: 100%;
+  height: calc(var(--menuheight) * 1.5);
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 10%,
+    rgb(from var(--background) r g b / var(--alpha)) 70%,
+
+    rgb(from var(--background) r g b / 0)
+  );
+  z-index: 10;
+  pointer-events: none;
+}
 .Main::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }

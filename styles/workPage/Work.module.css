@@ -26,3 +26,18 @@
   font-size: 1.25rem;
   color: var(--textdark);
 }
+@media screen and (max-width: 700px) {
+  .workIntro {
+    padding-bottom: 1.5em;
+  }
+  .workIntro h2 {
+    font-size: 3em;
+  }
+  .workIntro p {
+    font-size: 1em;
+  }
+
+  .workIntro span {
+    font-size: 1em;
+  }
+}

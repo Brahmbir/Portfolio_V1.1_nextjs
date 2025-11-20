@@ -26,9 +26,10 @@
 .selectTag button:hover {
   background-color: var(--mlight);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .selectTag {
     padding-inline: 0px;
+    padding-block: 0.75em;
     gap: 0px;
     justify-content: space-between;
   }
@@ -39,9 +40,15 @@
 @media screen and (max-width: 350px) {
   .selectTag {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5em;
     justify-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 280px) {
+  .selectTag {
+    grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
   }
   .selectTag button {

@@ -1,12 +1,13 @@
 .contsectDetail {
   z-index: 1;
   width: calc(100%);
+  padding-inline: var(--padding);
   padding-top: min(27.5em, calc(1.4 * 144px));
   display: flex;
   flex-direction: column;
   gap: 3.5em;
   color: var(--text);
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 .contsectDetail svg {
@@ -19,14 +20,13 @@
   color: var(--text);
   width: calc(100% - 2 * var(--padding));
   font-weight: 800;
-  padding-inline: 1em;
-  transform: translate(0%, 30%);
+  padding-inline: 0.5em 0em;
 }
 .contsectDetail > h2::before {
   content: "make";
   z-index: -1;
   line-height: 80%;
-  transform: translate(-3.5%, -50%);
+  transform: translate(-0.25em, -50%);
   position: absolute;
   color: var(--secondary);
   text-transform: uppercase;
@@ -35,8 +35,8 @@
 }
 .emailcosect {
   width: calc(100% - calc(2 * var(--padding)));
-  margin-block: 5em 3vh;
-  font-size: 1.7em;
+  margin-block: 1em 0;
+  font-size: 1.25em;
   line-height: 125%;
 }
 .emailcosect p {
@@ -50,20 +50,21 @@
 }
 .reachme > h3 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 100;
 }
 .linkreach {
-  margin-block: 5vh;
+  margin-block: 1em;
   width: 100%;
   display: flex;
 }
 .linkreach .linkbar {
   border-radius: 100px;
-  padding: 10px;
+  padding-block: 0.5em;
+  padding-inline: 0.75em 1.25em;
   background-color: #1d1d5e;
   display: flex;
-  gap: 10px;
+  gap: 1em;
 }
 .linkbar .img {
   position: relative;
@@ -86,7 +87,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: var(--text);
   transition: all 0.2s;
 }
@@ -117,9 +118,13 @@
   .linkreach {
     grid-template-columns: repeat(2, 1fr);
   }
+  .contsectDetail {
+    padding-inline: calc(0.5 * var(--padding));
+  }
 }
 @media screen and (max-width: 700px) {
   .contsectDetail {
+    padding-inline: 0px;
     padding-top: min(25em, calc(1.35 * 144px));
     gap: 3em;
   }
@@ -130,23 +135,19 @@
     padding-inline: 0vw;
   }
   .emailcosect {
-    margin-block: 4.5em 3em;
     width: calc(100%);
-    font-size: 1.3em;
+    font-size: 1em;
   }
   .reachme {
     width: calc(100%);
   }
   .reachme > h3 {
     margin: 0;
-    font-size: 1.5em;
     font-weight: 100;
   }
   .linkreach {
-    margin-block: 5vh;
     width: 100%;
     display: grid;
-    /* gap: ; */
   }
 }
 @media screen and (max-width: 400px) {
