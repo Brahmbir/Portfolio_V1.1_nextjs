@@ -75,7 +75,7 @@ a {
 .border_bar {
   pointer-events: none;
   --alpha: 0.8;
-  z-index: 0;
+  z-index: -100;
   position: absolute;
   width: 10em;
   height: 100%;
@@ -96,7 +96,7 @@ a {
 .maskBg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -200;
   -webkit-mask-image: linear-gradient(#0000 1%, #000, #0000 99%);
   mask-image: linear-gradient(#0000 1%, #000, #0000 99%);
 }
@@ -125,7 +125,6 @@ a {
 }
 .dot {
   position: absolute;
-  z-index: -100;
   width: 7.5em;
   transform: translate(-50%, -50%);
   aspect-ratio: 1;

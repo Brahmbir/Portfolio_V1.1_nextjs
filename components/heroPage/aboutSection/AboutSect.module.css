@@ -1,4 +1,5 @@
 .sect {
+  z-index: 1000;
   margin-inline: var(--padding);
   margin-bottom: 10em;
   width: calc(100% - 2 * var(--padding));

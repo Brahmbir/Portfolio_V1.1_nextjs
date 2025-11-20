@@ -38,17 +38,12 @@
   text-transform: uppercase;
   font-size: clamp(2.25em, 4vw, 3.25em);
 }
-.starWrapper {
-  transform: translateX(0%) translateY(30%); /* stays stable */
-  width: clamp(2.25em, 4vw, 3.25em);
-}
-
 .star {
   position: absolute;
-  inset: auto 50% 0px auto;
+  inset: auto 47.25% 0px auto;
   transform: translateX(50%) translateY(30%);
-  width: 10em;
-  min-width: min(10vw, calc(var(--max-width) / 7));
+  width: clamp(2.5em, 10vw, 10em);
+
   aspect-ratio: 1 / 1;
   animation: spin 20s infinite linear;
 }
