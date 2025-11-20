@@ -35,3 +35,9 @@
 .expArea::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+
+@media screen and (max-width: 700px) {
+  .into h2 {
+    font-size: 1em;
+  }
+}
