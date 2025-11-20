@@ -20,8 +20,9 @@ const ContactSection = () => {
           preserveAspectRatio="none"
         >
           <text
-            x="0"
+            x="50%"
             y="50%"
+            textAnchor="middle"
             dominantBaseline="middle"
             textLength="100%"
             lengthAdjust="spacingAndGlyphs"

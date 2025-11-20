@@ -2,13 +2,40 @@
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
   background-color: transparent;
   overflow-y: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
 
+.Sbar,
+.topbar {
+  position: absolute;
+  --alpha: 0.8;
+  z-index: 10;
+  top: 0;
+
+  pointer-events: none;
+  background: #b15aa1;
+}
+.Sbar {
+  z-index: -4;
+  height: 100%;
+  width: 5em;
+  left: -0.1em;
+
+  background: linear-gradient(
+    to right,
+    var(--background) 10%,
+    /* rgb(from var(--background) r g b / var(--alpha)), */
+      rgb(from var(--background) r g b / 0)
+  );
+}
+.rigthbar {
+  right: -0.1em;
+  left: auto;
+  transform: rotate(180deg);
+}
 .topbar {
   position: absolute;
   --alpha: 0.8;
@@ -37,7 +64,6 @@
   z-index: 100;
   width: calc(100%);
   padding-bottom: 2.5em;
-  overflow: hidden;
   height: min-content;
   padding-inline: calc(var(--padding) * 1.5);
 }
@@ -45,20 +71,21 @@
   z-index: 0;
   position: absolute;
   inset: 0px;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
+  width: calc(100%);
+  height: calc(100%);
   background-color: var(--background);
 }
 .film::before,
 .film::after {
   position: absolute;
-  width: calc(100%);
+  transform: translateX(-50%);
+  width: calc(500%);
   height: calc(100%);
   content: " ";
   inset: 0px;
   top: 0;
-  left: 0;
+  left: 50%;
 }
 .film::after {
   z-index: -5;
