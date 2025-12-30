@@ -80,8 +80,6 @@
 @media screen and (max-width: 550px) {
   .link {
     margin: 0;
-    height: 100vh;
-    height: 0;
     max-height: 1440px;
     position: absolute;
     inset: 0;
@@ -98,7 +96,6 @@
     display: none;
   }
   .link a {
-    opacity: 0;
     transition: opacity 0.4s cubic-bezier(0, 0.28, 0.59, 1);
   }
   .navMenu {
@@ -109,5 +106,11 @@
   }
   .link[data-visi="true"] a {
     opacity: 1;
+  }
+  .link[data-visi="false"] {
+    height: 0;
+  }
+  .link[data-visi="false"] a {
+    opacity: 0;
   }
 }

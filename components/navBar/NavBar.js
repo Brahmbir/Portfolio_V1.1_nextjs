@@ -61,21 +61,17 @@ export default function NavBar() {
         {/* DESKTOP: Animated */}
         {!isSmallScreen && (
           <AnimatePresence>
-            {
-              <ul data-visi="true" className={styles.link}>
-                {MenuContent}
-              </ul>
-            }
+            {<ul className={styles.link}>{MenuContent}</ul>}
           </AnimatePresence>
         )}
 
         {/* MOBILE: Static */}
         {isSmallScreen && menuOpen && (
           <motion.ul
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.25 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0 }}
+            // transition={{ duration: 0.25 }}
             data-visi={menuOpen}
             id="Hlink"
             className={styles.link}
