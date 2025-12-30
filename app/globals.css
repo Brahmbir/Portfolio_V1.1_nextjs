@@ -32,6 +32,7 @@ body {
   height: 100svh;
   margin: auto;
   display: grid;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
@@ -125,12 +126,25 @@ a {
 }
 .dot {
   position: absolute;
+  will-change: transform;
+  transform: translate3d(-9999px, -9999px, 0) translate(-50%, -50%);
+  pointer-events: none;
+
+  transition: transform 1s ease-out;
+
   width: 7.5em;
   z-index: -10;
-  transform: translate(-50%, -50%);
   aspect-ratio: 1;
   backdrop-filter: blur(2em);
   -webkit-backdrop-filter: blur(2em);
   background: radial-gradient(circle, #9d9de1ba 15%, #9d9de100 75%);
   border-radius: 100vmax;
 }
+
+/* .dot {
+}
+
+.maskBg {
+  position: relative;
+  overflow: hidden;
+} */

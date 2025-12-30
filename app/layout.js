@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <NavBar />
-        <main>
+        <main id="main-scroll">
           <ChatComponent />
           <AnimateP>{children}</AnimateP>
         </main>

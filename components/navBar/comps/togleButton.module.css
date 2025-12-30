@@ -1,33 +1,53 @@
 .nav_but {
-    cursor: pointer;
-    border: 0;
-    z-index: 21;
-    margin-block: auto;
-    margin-inline: auto 0vw;
-    padding: 0;
-    border-radius: 2px;
-    width: 44px;
-    height: 32px;
-    display: none;
-    transition: all 350ms;
-    overflow: hidden;
-    background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  z-index: 21;
+  margin-block: auto;
+  margin-inline: auto 0;
+  padding: 0;
+  border-radius: 2px;
+
+  width: 44px;
+  height: 32px;
+
+  background: transparent;
+  overflow: hidden;
+
+  display: none;
+
+  /* Avoid `transition: all` */
+  transition: background-color 0.25s ease;
+}
+
+/* Icon wrapper (important) */
+.icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+
+  will-change: transform, opacity;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+.nav_but svg {
+  fill: var(--text);
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s, fill 0.5s;
+}
+/* SVG styles */
+.threebar,
+.backarro {
+  width: 100%;
+  height: 100%;
+  fill: var(--text);
+
+  pointer-events: none;
+}
+/* Mobile only */
+@media screen and (max-width: 550px) {
+  .nav_but {
+    display: block;
+    position: relative;
   }
-  .nav_but svg {
-    fill: var(--text);
-    width: 100%;
-    height: 100%;
-    transition: transform 0.4s, fill 0.5s;
-  }
-  .threebar {
-    transform: translateX(0px);
-  }
-  .backarro {
-    transform: translateX(44px) translateY(-36px) rotateY(180deg);
-  }
-  @media screen and (max-width: 550px) {
-    .nav_but {
-      display: block;
-    }
-  }
-  
+}

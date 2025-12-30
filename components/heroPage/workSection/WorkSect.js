@@ -4,7 +4,6 @@ import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
 import WorkCard from "./WorkCard";
-import WorkLink from "./WorkLink";
 import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -60,12 +59,10 @@ const WorkSect = () => {
           })
         )}
       </div>
-      <WorkLink>
-        <Link href={"/work"} className={styles.but}>
-          <p>ALL CASE STUDIES</p>
-          <GoArrowUpRight />
-        </Link>
-      </WorkLink>
+      <Link href={"/work"} className={styles.but}>
+        <p>ALL CASE STUDIES</p>
+        <GoArrowUpRight />
+      </Link>
     </section>
   );
 };
